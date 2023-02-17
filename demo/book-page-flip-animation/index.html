@@ -8,6 +8,10 @@
     <title>StPageFlip: Realistic Book Page Flip Animation Example</title>
     <link rel="stylesheet" href="../../ajax/libs/bootswatch/4.3.1/flatly/bootstrap.min.css">
     <style>
+        body {
+            overflow: hidden;
+        }
+        
         .wrapper {
             margin: 100px auto;
         }
@@ -34,12 +38,12 @@
         }
         
         .page.--left {
-            /*border-right: 0;*/
+            border-right: 0;
             /*box-shadow: inset -7px 0 30px -7px rgba(0, 0, 0, 0.4);*/
         }
         
         .page.--right {
-            /*border-left: 0;*/
+            border-left: 0;
             /*box-shadow: inset 7px 0 30px -7px rgba(0, 0, 0, 0.4);*/
         }
     </style>
@@ -52,7 +56,7 @@
 
         <div class="container">
             <div class="flip-book" id="demoBookExample">
-                <div class="page " data-density="soft">
+                <div class="page cover-top" data-density="soft">
 
                     <img src="../book-page-flip-animation/cover-0.png">
 
@@ -83,7 +87,24 @@
 
                     </div>
                 </div>
-                <div class="page " data-density="soft">
+
+                <div class="page">
+                    <div class="page-content">
+                        <img src="../book-page-flip-animation/cover.png">
+
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="page-content">
+                        <img src="../book-page-flip-animation/cover.png">
+
+                    </div>
+                </div>
+
+
+
+                <div class="page cover-bottom" data-density="soft">
                     <div class="page-content">
                         <img src="../book-page-flip-animation/cover-0.png">
                     </div>
@@ -106,8 +127,8 @@
                     maxWidth: 1080,
                     minHeight: 420,
                     maxHeight: 1920,
-
-                    maxShadowOpacity: 0.7, // Half shadow intensity
+                    flippingTime: 1000,
+                    maxShadowOpacity: 0.5, // Half shadow intensity
                     showCover: false,
                     mobileScrollSupport: false // disable content scrolling on mobile devices
                 }
