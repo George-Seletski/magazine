@@ -1,0 +1,138 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>StPageFlip: Realistic Book Page Flip Animation Example</title>
+    <link rel="stylesheet" href="../../ajax/libs/bootswatch/4.3.1/flatly/bootstrap.min.css">
+    <style>
+        .wrapper {
+            margin: 100px auto;
+        }
+        
+        .flip-book {
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+            display: none;
+            background-size: cover;
+        }
+        
+        .page {
+            background-color: #f4e8d7;
+            border: solid 1px #c2b5a3;
+            overflow: hidden;
+        }
+        
+        .page .page-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+        
+        .page.--left {
+            border-right: 0;
+            box-shadow: inset -7px 0 30px -7px rgba(0, 0, 0, 0.4);
+        }
+        
+        .page.--right {
+            border-left: 0;
+            box-shadow: inset 7px 0 30px -7px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+
+        <div class="container">
+            <div class="flip-book" id="demoBookExample">
+                <div class="page " data-density="soft">
+
+                    <img src="../book-page-flip-animation/cover-0.png">
+
+                </div>
+                <div class="page">
+                    <div class="page-content">
+                        <img src="../book-page-flip-animation/cover.png">
+
+                    </div>
+                </div>
+                <!-- PAGES .... -->
+                <div class="page">
+                    <div class="page-content">
+                        <img src="../book-page-flip-animation/list-2.png">
+
+                    </div>
+                </div>
+                <div class="page">
+                    <div class="page-content">
+                        <img src="../book-page-flip-animation/cover.png">
+
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="page-content">
+                        <img src="../book-page-flip-animation/list-2.png">
+
+                    </div>
+                </div>
+                <div class="page " data-density="soft">
+                    <div class="page-content">
+                        <img src="../book-page-flip-animation/cover-0.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../npm/page-flip%400.4.3/dist/js/page-flip.browser.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            const pageFlip = new St.PageFlip(
+                document.getElementById("demoBookExample"), {
+                    width: 625, // base page width
+                    height: 850, // base page height
+
+                    size: "stretch",
+                    // set threshold values:
+                    minWidth: 315,
+                    maxWidth: 1080,
+                    minHeight: 420,
+                    maxHeight: 1920,
+
+                    maxShadowOpacity: 0.7, // Half shadow intensity
+                    showCover: false,
+                    mobileScrollSupport: false // disable content scrolling on mobile devices
+                }
+            );
+
+            // load pages
+            pageFlip.loadFromHTML(document.querySelectorAll(".page"));
+
+            document.querySelector(".page-total").innerText = pageFlip.getPageCount();
+            document.querySelector(
+                ".page-orientation"
+            ).innerText = pageFlip.getOrientation();
+
+
+
+            // triggered by page turning
+            pageFlip.on("flip", (e) => {
+                document.querySelector(".page-current").innerText = e.data + 1;
+            });
+
+
+
+        });
+    </script>
+
+</body>
+
+</html>
