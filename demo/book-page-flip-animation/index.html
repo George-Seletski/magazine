@@ -83,21 +83,21 @@
 
                 <div class="page">
                     <div class="page-content">
+                        <img src="../book-page-flip-animation/list-1.png">
+
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="page-content">
+                        <img src="../book-page-flip-animation/list-3.png">
+
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="page-content">
                         <img src="../book-page-flip-animation/list-2.png">
-
-                    </div>
-                </div>
-
-                <div class="page">
-                    <div class="page-content">
-                        <img src="../book-page-flip-animation/cover.png">
-
-                    </div>
-                </div>
-
-                <div class="page">
-                    <div class="page-content">
-                        <img src="../book-page-flip-animation/cover.png">
 
                     </div>
                 </div>
@@ -149,6 +149,15 @@
                 document.querySelector(".page-current").innerText = e.data + 1;
             });
 
+            // triggered when the state of the book changes
+            pageFlip.on("changeState", (e) => {
+                document.querySelector(".page-state").innerText = e.data;
+            });
+
+            // triggered when page orientation changes
+            pageFlip.on("changeOrientation", (e) => {
+                document.querySelector(".page-orientation").innerText = e.data;
+            });
 
 
         });
