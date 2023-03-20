@@ -226,6 +226,9 @@ function resizeViewport() {
         options = $('.magazine').turn('options');
 
     $('.magazine').removeClass('animated');
+    if (width < 600) {
+        $('.instacard').addClass('odd');
+    }
 
     $('.magazine-viewport').css({
         width: width,
