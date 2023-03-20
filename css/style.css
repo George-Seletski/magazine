@@ -71,3 +71,15 @@ a {
     float: right;
     padding-right: 8px;
 }
+
+.instacard.odd {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 400px;
+    height: 525px;
+    position: absolute;
+    margin-left: 50%;
+    margin-bottom: 63%;
+}

@@ -47,6 +47,10 @@ body {
     display: none;
 }
 
+.table-contents {
+    width: 1em;
+}
+
 
 /*NAVBAR*/
 
@@ -62,7 +66,7 @@ body {
     left: 47.7%;
     width: 1322px;
     height: 822px;
-    margin: auto;
+    margin: 1 em;
 }
 
 .magazine-viewport .magazine {
