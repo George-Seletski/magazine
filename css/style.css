@@ -16,8 +16,8 @@ a {
     width: 400px;
     height: 525px;
     position: absolute;
-    bottom: 70%;
-    left: -65%;
+    bottom: 55%;
+    left: -50%;
     z-index: 1;
 }
 
@@ -80,6 +80,6 @@ a {
     width: 400px;
     height: 525px;
     position: absolute;
-    margin-left: 50%;
-    margin-bottom: 63%;
+    left: -10em;
+    bottom: 60em;
 }

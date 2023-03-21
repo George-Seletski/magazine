@@ -205,7 +205,6 @@
 
             var flipbook = $('.magazine');
 
-
             // Check if the CSS was already loaded
 
             if (flipbook.width() == 0 || flipbook.height() == 0) {
@@ -219,11 +218,11 @@
 
                 // Magazine width
 
-                width: 1322,
+                width: 922,
 
                 // Magazine height
 
-                height: 822,
+                height: 600,
 
                 // Duration in millisecond
 
@@ -254,6 +253,7 @@
                 when: {
                     turning: function(event, page, view) {
                         $('.instacard').hide();
+                        document.getElementById('instacard').style.zIndex = 0
 
                         var book = $(this),
                             currentPage = book.turn('page'),
@@ -268,27 +268,25 @@
                         disableControls(page);
 
 
-                        $('.thumbnails .page-' + currentPage).
-                        parent().
-                        removeClass('current');
+                        $('.thumbnails .page-' + currentPage).parent().removeClass('current');
 
-                        $('.thumbnails .page-' + page).
-                        parent().
-                        addClass('current');
+                        $('.thumbnails .page-' + page).parent().addClass('current');
 
 
 
                     },
 
                     turned: function(event, page, view) {
-
+                        $('.instacard').hide();
+                        document.getElementById('instacard').style.zIndex = 0
 
                         disableControls(page);
 
                         $(this).turn('center');
 
                         if (page == 1) {
-                            $(this).turn('peel', 'br');
+                            //$(this).turn('peel', 'br');
+                            document.getElementById('instacard').style.zIndex = 1
                             $('.instacard').show();
                         } else {
 
@@ -349,6 +347,7 @@
                         $('.magazine').removeClass('animated').addClass('zoom-in');
                         $('.zoom-icon').removeClass('zoom-icon-in').addClass('zoom-icon-out');
                         $('.instacard').hide();
+                        document.getElementById('instacard').style.zIndex = 0
 
                         if (!window.escTip && !$.isTouch) {
                             escTip = true;
@@ -379,6 +378,7 @@
                             $('.magazine').addClass('animated').removeClass('zoom-in');
                             resizeViewport();
                             $('.instacard').show();
+                            document.getElementById('instacard').style.zIndex = 0
                         }, 0);
 
                     }
@@ -449,8 +449,6 @@
 
 
             $(window).resize(function() {
-
-
 
                 resizeViewport();
             }).bind('orientationchange', function() {
@@ -566,6 +564,10 @@
 
 
             resizeViewport();
+            if ($(window).width() < 600) {
+
+                $('.instacard').addClass('odd');
+            }
 
             $('.magazine').addClass('animated');
 

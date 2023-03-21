@@ -226,9 +226,9 @@ function resizeViewport() {
         options = $('.magazine').turn('options');
 
     $('.magazine').removeClass('animated');
-    if (width < 600) {
+    /*if (width < 1000) {
         $('.instacard').addClass('odd');
-    }
+    }*/
 
     $('.magazine-viewport').css({
         width: width,
@@ -245,9 +245,10 @@ function resizeViewport() {
             boundHeight: Math.min(options.height, height)
         });
 
-        if (bound.width % 2 !== 0)
+        if (bound.width % 2 !== 0) {
             bound.width -= 1;
-
+            console.log(bound.width);
+        }
 
         if (bound.width != $('.magazine').width() || bound.height != $('.magazine').height()) {
 
@@ -259,13 +260,15 @@ function resizeViewport() {
             $('.next-button').css({ height: bound.height, backgroundPosition: '-38px ' + (bound.height / 2 - 32 / 2) + 'px' });
             $('.previous-button').css({ height: bound.height, backgroundPosition: '-4px ' + (bound.height / 2 - 32 / 2) + 'px' });
         }
-
+        console.log(bound.width);
         $('.magazine').css({ top: -bound.height / 2, left: -bound.width / 2 });
+        console.log(-bound.width / 2);
     }
 
-    var magazineOffset = $('.magazine').offset(),
+    var magazineOffset = $('.magazine'),
         boundH = height - magazineOffset.top - $('.magazine').height(),
         marginTop = (boundH - $('.thumbnails > div').height()) / 2;
+
 
     if (marginTop < 0) {
         $('.thumbnails').css({ height: 1 });

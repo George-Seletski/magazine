@@ -12,6 +12,7 @@ body {
     background-color: rgb(187, 129, 129);
     z-index: 100;
     position: absolute;
+    z-index: 1000;
 }
 
 .nav-link {
@@ -23,36 +24,12 @@ body {
     color: rgb(185, 185, 185);
 }
 
-.topnav {
-    overflow: hidden;
-    background-color: rgb(187, 129, 129);
-}
 
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 10px 16px;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.topnav .icon {
-    display: none;
-}
+/*NAVBAR*/
 
 .table-contents {
     width: 1em;
 }
-
-
-/*NAVBAR*/
 
 .search-container {
     text-align: center;
@@ -64,21 +41,21 @@ body {
     position: absolute;
     top: 48%;
     left: 47.7%;
-    width: 1322px;
-    height: 822px;
-    margin: 1 em;
+    width: 922px;
+    height: 600px;
+    margin: auto auto 1em;
 }
 
 .magazine-viewport .magazine {
-    width: 1322px;
-    height: 1322px;
-    left: -411px;
-    top: -500px;
+    width: 922px;
+    height: 600px;
+    left: -461px;
+    top: -300px;
 }
 
 .magazine-viewport .page {
-    width: 411px;
-    height: 1322px;
+    width: 461px;
+    height: 600px;
     background-color: white;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -243,6 +220,7 @@ body {
     -ms-transition: margin-left 0.5s;
     -o-transition: margin-left 0.5s;
     transition: margin-left 0.5s;
+    margin-left: 0 !important;
 }
 
 .thumbnails {
