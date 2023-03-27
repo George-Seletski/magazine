@@ -250,7 +250,7 @@ function resizeViewport() {
 
         if (bound.width % 2 !== 0) {
             bound.width -= 1;
-            console.log(bound.width);
+            /*console.log(bound.width);*/
         }
 
         if (bound.width != $('.magazine').width() || bound.height != $('.magazine').height()) {
@@ -265,7 +265,7 @@ function resizeViewport() {
         }
 
         $('.magazine').css({ top: -bound.height / 2, left: -(bound.width - 15) / 2 });
-        console.log(-bound.height / 2, -bound.width / 2);
+        /*console.log(-bound.height / 2, -bound.width / 2);*/
 
     }
 
