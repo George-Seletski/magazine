@@ -10,11 +10,14 @@
     <script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
     <script type="text/javascript" src="js/hash.js"></script>
 
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-sm ">
+    <nav class="navbar navbar-expand-lg ">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,8 +47,8 @@
 
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search page">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" id="pageInput" type="search" placeholder="Search page">
+                <button class="btn btn-secondary my-2 my-sm-0" onclick="getPage();" type="button">Search</button>
             </form>
         </div>
     </nav>
@@ -203,6 +206,7 @@
 
             $('#canvas').fadeIn(100);
 
+
             var flipbook = $('.magazine');
 
             // Check if the CSS was already loaded
@@ -218,11 +222,11 @@
 
                 // Magazine width
 
-                width: 922,
+                width: 1222,
 
                 // Magazine height
 
-                height: 600,
+                height: 800,
 
                 // Duration in millisecond
 
@@ -563,6 +567,7 @@
             });
 
 
+
             resizeViewport();
             if ($(window).width() < 600) {
 
@@ -610,7 +615,7 @@
             test: Modernizr.csstransforms,
             yep: ['js/turn.min.js'],
             nope: ['js/turn.html4.min.js'],
-            both: ['js/zoom.min.js', 'js/magazine.js', 'css/magazine.css', 'https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css', 'css/style.css'],
+            both: ['js/zoom.min.js', 'js/magazine.js', 'css/magazine.css', 'css/style.css'],
             complete: loadApp
         });
     </script>

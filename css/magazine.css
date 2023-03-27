@@ -5,14 +5,17 @@ body {
     padding: 0;
 }
 
+#canvas {
+    height: calc(100vh - 50px);
+}
+
 
 /*NAVBAR*/
 
 .navbar {
     background-color: rgb(187, 129, 129);
-    z-index: 100;
+    height: 50px;
     position: absolute;
-    z-index: 1000;
 }
 
 .nav-link {
@@ -24,6 +27,11 @@ body {
     color: rgb(185, 185, 185);
 }
 
+@media (max-width: 576px) {
+      .navbar-collapse {
+            display: none;
+      }
+}
 
 /*NAVBAR*/
 
@@ -41,21 +49,21 @@ body {
     position: absolute;
     top: 48%;
     left: 47.7%;
-    width: 922px;
-    height: 600px;
+    width: 1222px;
+    height: 800px;
     margin: auto auto 1em;
 }
 
 .magazine-viewport .magazine {
-    width: 922px;
-    height: 600px;
-    left: -461px;
-    top: -300px;
+    width: 1222px;
+    height: 800px;
+    left: -517px;
+    top: -400px;
 }
 
 .magazine-viewport .page {
-    width: 461px;
-    height: 600px;
+    width: 611px;
+    height: 800px;
     background-color: white;
     background-repeat: no-repeat;
     background-size: 100% 100%;

@@ -1,6 +1,9 @@
-/*
- * Magazine sample
- */
+function getPage() {
+    // Selecting the number of a page  and get its value 
+    var inputVal = document.getElementById("pageInput").value;
+    window.location.href = '#page/' + inputVal;
+
+}
 
 function addPage(page, book) {
 
@@ -260,9 +263,10 @@ function resizeViewport() {
             $('.next-button').css({ height: bound.height, backgroundPosition: '-38px ' + (bound.height / 2 - 32 / 2) + 'px' });
             $('.previous-button').css({ height: bound.height, backgroundPosition: '-4px ' + (bound.height / 2 - 32 / 2) + 'px' });
         }
-        console.log(bound.width);
-        $('.magazine').css({ top: -bound.height / 2, left: -bound.width / 2 });
-        console.log(-bound.width / 2);
+
+        $('.magazine').css({ top: -bound.height / 2, left: -(bound.width - 15) / 2 });
+        console.log(-bound.height / 2, -bound.width / 2);
+
     }
 
     var magazineOffset = $('.magazine'),
