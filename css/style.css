@@ -84,6 +84,8 @@ a {
 }
 
 .instacard.odd {
+    display:none; 
+    /*
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border: 1px solid #ccc;
     background-color: #fff;
@@ -92,5 +94,6 @@ a {
     height: 525px;
     position: absolute;
     left: -10em;
-    bottom: 60em;
+    bottom: 60em;*/
 }
+

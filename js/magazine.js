@@ -1,9 +1,20 @@
+function SidebarAction() {
+    var x = document.getElementById("sidebar-wrapper");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
 function getPage() {
     // Selecting the number of a page  and get its value 
     var inputVal = document.getElementById("pageInput").value;
     window.location.href = '#page/' + inputVal;
 
 }
+
+
 
 function addPage(page, book) {
 
