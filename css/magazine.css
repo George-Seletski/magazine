@@ -15,7 +15,12 @@ body {
 .navbar {
     background-color: rgb(187, 129, 129);
     height: 50px;
-    position: absolute;
+    /*position: absolute;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
 }
 
 .nav-link {
@@ -60,6 +65,13 @@ body {
     height: 800px;
     left: -517px;
     top: -400px;
+}
+
+@media only screen and (max-width: 400px) {
+    .magazine-viewport .magazine {
+        width: 1222px;
+        height: 800px;
+    }
 }
 
 .magazine-viewport .page {

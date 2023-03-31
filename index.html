@@ -344,6 +344,13 @@
                                 </div>
                     </div>-->
     <script type="text/javascript">
+        var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+        if (mobile) {
+
+            $('.inscard').hide();
+        }
+
+
         function loadApp() {
             $("#canvas").fadeIn(100);
 
@@ -420,7 +427,7 @@
                     },
 
                     turned: function(event, page, view) {
-                        $(".instacard").hide();
+                        //$(".instacard").hide();
                         document.getElementById("instacard").style.zIndex = 0;
 
                         disableControls(page);
@@ -472,7 +479,7 @@
                         $(".zoom-icon")
                             .removeClass("zoom-icon-in")
                             .addClass("zoom-icon-out");
-                        $(".instacard").hide();
+                        //$(".instacard").hide();
                         document.getElementById("instacard").style.zIndex = 0;
 
                         if (!window.escTip && !$.isTouch) {
@@ -506,7 +513,10 @@
                         setTimeout(function() {
                             $(".magazine").addClass("animated").removeClass("zoom-in");
                             resizeViewport();
-                            $(".instacard").show();
+                            if (!mobile) {
+                                $(".instacard").show();
+                            }
+
                             document.getElementById("instacard").style.zIndex = 0;
                         }, 0);
                     },
@@ -657,7 +667,7 @@
 
             resizeViewport();
             if ($(window).width() < 600) {
-                $(".instacard").addClass("odd");
+                $(".instacard").remove();
             }
 
             $(".magazine").addClass("animated");
