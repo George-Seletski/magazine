@@ -36,6 +36,21 @@ body {
 
 /*NAVBAR*/
 
+
+/*Modal*/
+
+.modal {
+    background: rgba(255, 255, 255, 0.384);
+}
+
+.modal-backdrop {
+    display: none;
+}
+
+1200;
+
+/*Modal*/
+
 .table-contents {
     width: 1em;
 }
