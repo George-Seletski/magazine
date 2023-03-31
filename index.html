@@ -14,14 +14,12 @@
 </head>
 
 <body>
-    <!--<nav class="navbar navbar-expand-lg">-->
-    <nav class="navbar navbar-expand-md navbar-light fixed-top">
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-</button>
-        <div class="collapse navbar-collapse" id="navbarLinks">
-            <ul class="navbar-nav ml-auto">
+    <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <!--<li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -40,7 +38,7 @@
             </a>
           </li>-->
                 <li class="nav-item">
-                    <a class="btn nav-link" style="color: #fff;" data-toggle="modal" data-target="#exampleModalLong">
+                    <a type="button" class="btn btn-link" style="color: #fff;" data-toggle="modal" data-target="#exampleModalLong">
                             View
                         </a>
                     <!-- Modal -->
@@ -346,13 +344,6 @@
                                 </div>
                     </div>-->
     <script type="text/javascript">
-        var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
-        if (mobile) {
-
-            $('.inscard').hide();
-        }
-
-
         function loadApp() {
             $("#canvas").fadeIn(100);
 
@@ -429,7 +420,7 @@
                     },
 
                     turned: function(event, page, view) {
-                        //$(".instacard").hide();
+                        $(".instacard").hide();
                         document.getElementById("instacard").style.zIndex = 0;
 
                         disableControls(page);
@@ -481,7 +472,7 @@
                         $(".zoom-icon")
                             .removeClass("zoom-icon-in")
                             .addClass("zoom-icon-out");
-                        //$(".instacard").hide();
+                        $(".instacard").hide();
                         document.getElementById("instacard").style.zIndex = 0;
 
                         if (!window.escTip && !$.isTouch) {
@@ -515,10 +506,7 @@
                         setTimeout(function() {
                             $(".magazine").addClass("animated").removeClass("zoom-in");
                             resizeViewport();
-                            if (!mobile) {
-                                $(".instacard").show();
-                            }
-
+                            $(".instacard").show();
                             document.getElementById("instacard").style.zIndex = 0;
                         }, 0);
                     },
@@ -669,7 +657,7 @@
 
             resizeViewport();
             if ($(window).width() < 600) {
-                $(".instacard").remove();
+                $(".instacard").addClass("odd");
             }
 
             $(".magazine").addClass("animated");
