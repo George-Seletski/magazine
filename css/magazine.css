@@ -15,12 +15,7 @@ body {
 .navbar {
     background-color: rgb(187, 129, 129);
     height: 50px;
-    /*position: absolute;*/
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
+    position: absolute;
 }
 
 .nav-link {
