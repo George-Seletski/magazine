@@ -346,7 +346,7 @@
                     </div>-->
     <script type="text/javascript">
         var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
-        if (mobile) {
+        if (window.innerWidth < 1440) {
 
             $('.inscard').hide();
             $('.container').css('left', 0);
@@ -440,7 +440,10 @@
                         if (page == 1) {
                             // $(this).turn('peel', 'br');
                             document.getElementById("instacard").style.zIndex = 1;
-                            $(".instacard").show();
+                            if (!mobile) {
+                                $(".instacard").show();
+                            }
+
                         } else {}
                     },
 
