@@ -68,6 +68,10 @@ a {
     width: 100%;
 }
 
+.instacard-image:hover {
+    filter: grayscale(50%);
+}
+
 .instagram-like,
 .instagram-comment,
 .instagram-send,
