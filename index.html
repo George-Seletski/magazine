@@ -6,6 +6,7 @@
     <!--<meta name="viewport" content="width= 1050, user-scalable= no"/>-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="js/jquery.min.1.7.js"></script>
+
     <script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
     <script type="text/javascript" src="js/hash.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
@@ -348,6 +349,8 @@
         if (mobile) {
 
             $('.inscard').hide();
+            $('.container').css('left', 0);
+            $('.magazine').css('left', 0);
         }
 
         function loadApp() {
@@ -379,7 +382,8 @@
 
                 // Hardware acceleration
 
-                acceleration: !isChrome(),
+                //acceleration: !isChrome(),
+                acceleration: true,
 
                 // Enables gradients
 
@@ -468,7 +472,7 @@
 
                     resize: function(event, scale, page, pageElement) {
                         if (scale == 1) loadSmallPage(page, pageElement);
-                        else loadLargePage(page, pageElement);
+                        //else loadLargePage(page, pageElement);
                     },
 
                     zoomIn: function() {

@@ -179,7 +179,7 @@ function processRegion(region, regionType) {
 
 // Load large page
 
-function loadLargePage(page, pageElement) {
+/*function loadLargePage(page, pageElement) {
 
     var img = $('<img />');
 
@@ -195,7 +195,7 @@ function loadLargePage(page, pageElement) {
     // Loadnew page
 
     img.attr('src', 'pages/' + page + '-large.png');
-}
+}*/
 
 // Load small page
 
@@ -314,50 +314,7 @@ function getViewNumber(book, page) {
     return parseInt((page || book.turn('page')) / 2 + 1, 10);
 }
 
-function moveBar(yes) {
-    if (Modernizr && Modernizr.csstransforms) {
-        $('#slider .ui-slider-handle').css({ zIndex: yes ? 2 : 10000 });
-    }
-}
 
-function setPreview(view) {
-
-    var previewWidth = 112,
-        previewHeight = 73,
-        previewSrc = 'pages/preview.png',
-        preview = $(_thumbPreview.children(':first')),
-        numPages = (view == 1 || view == $('#slider').slider('option', 'max')) ? 1 : 2,
-        width = (numPages == 1) ? previewWidth / 2 : previewWidth;
-
-    _thumbPreview.
-    addClass('no-transition').
-    css({
-        width: width + 15,
-        height: previewHeight + 15,
-        top: -previewHeight - 30,
-        left: ($($('#slider').children(':first')).width() - width - 15) / 2
-    });
-
-    preview.css({
-        width: width,
-        height: previewHeight
-    });
-
-    if (preview.css('background-image') === '' ||
-        preview.css('background-image') == 'none') {
-
-        preview.css({ backgroundImage: 'url(' + previewSrc + ')' });
-
-        setTimeout(function() {
-            _thumbPreview.removeClass('no-transition');
-        }, 0);
-
-    }
-
-    preview.css({
-        backgroundPosition: '0px -' + ((view - 1) * previewHeight) + 'px'
-    });
-}
 
 // Width of the flipbook when zoomed in
 
@@ -394,13 +351,17 @@ function calculateBound(d) {
 
         if (d.boundWidth / rel > d.boundHeight && d.boundHeight * rel <= d.boundWidth) {
 
-            bound.width = Math.round(d.boundHeight * rel);
+            bound.width = Math.round(d.boundHeight * rel) + 100;
+
             bound.height = d.boundHeight;
+            //console.log('a)', bound.width, bound.height)
 
         } else {
 
-            bound.width = d.boundWidth;
-            bound.height = Math.round(d.boundWidth / rel);
+            bound.width = d.boundWidth + 250;
+            bound.height = Math.round(d.boundWidth / rel) + 200;
+            console.log('b)', bound.width, bound.height)
+
 
         }
     }
