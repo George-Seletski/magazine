@@ -33,5 +33,16 @@ a {
 
 .youtube-image {
     width: 100%;
-    padding: 1em;
+    padding: 0.5em;
+}
+
+.mobile {
+    left: 4%;
+    height: fit-content;
+    width: 21em;
+}
+
+.frame-mobile {
+    height: 22em;
+    width: 21em;
 }

@@ -430,6 +430,11 @@
                         } else {
 
                             if (page == 28) {
+                                if (mobile) {
+                                    $(".youtube").addClass("mobile");
+                                    $(".youtube-image").addClass("frame-mobile");
+
+                                }
                                 $(".youtube").show();
                             } else {
                                 $(".youtube").hide();
