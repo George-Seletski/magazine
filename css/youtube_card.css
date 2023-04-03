@@ -39,10 +39,10 @@ a {
 .mobile {
     left: 4%;
     height: fit-content;
-    width: 21em;
+    width: 20em;
 }
 
 .frame-mobile {
-    height: 22em;
-    width: 21em;
+    height: 15em;
+    width: 20em;
 }

@@ -430,7 +430,12 @@
                         } else {
 
                             if (page == 28) {
-                                if (mobile) {
+
+                                if (window.innerWidth >= 1440 && window.innerWidth < 2560) {
+                                    $(".youtube").css('left', '10%');
+                                }
+                                if (mobile && window.innerWidth <= 425) {
+
                                     $(".youtube").addClass("mobile");
                                     $(".youtube-image").addClass("frame-mobile");
 
