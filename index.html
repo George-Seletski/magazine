@@ -309,9 +309,9 @@
                     <a href="https://youtu.be/XNrTIQjHuKs">
 
 
-                        <div id="image">
+                        <div id="image" class="youtube-image">
                             <!-- <img src="./images/image.png" class="youtube-image" alt="image">-->
-                            <iframe width="600" class="youtube-image" height="400" src="https://www.youtube.com/embed/XNrTIQjHuKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            <iframe width="500" class="youtube-image" height="400" src="https://www.youtube.com/embed/XNrTIQjHuKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
 
@@ -434,10 +434,27 @@
                                 if (window.innerWidth >= 1440 && window.innerWidth < 2560) {
                                     $(".youtube").css('left', '10%');
                                 }
-                                if (mobile && window.innerWidth <= 425) {
+                                if (mobile) {
+                                    if (window.innerWidth >= 768 && window.innerWidth < 1440) {
 
-                                    $(".youtube").addClass("mobile");
-                                    $(".youtube-image").addClass("frame-mobile");
+                                    } else {
+                                        if (window.innerWidth > 320 && window.innerWidth < 425) {
+                                            $(".youtube").css('left', '5%');
+                                            $(".youtube").css('width', '18em');
+                                            $(".youtube-image").addClass("frame-mobile");
+                                        }
+                                        if (window.innerWidth == 425) {
+                                            $(".youtube").css('width', '18em');
+                                            $(".youtube").css('left', '6%');
+                                        }
+
+                                        if (window.innerWidth <= 320) {
+                                            $(".youtube").css('left', '5%');
+                                            $(".youtube-image").addClass("frame-mobile");
+                                            $(".youtube").css('bottom', '85%');
+                                            $(".youtube").css('width', '15em');
+                                        }
+                                    }
 
                                 }
                                 $(".youtube").show();

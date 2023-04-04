@@ -13,7 +13,7 @@ a {
     border: 1px solid #ccc;
     background-color: #fff;
     border-radius: 5px;
-    width: 600px;
+    width: 500px;
     height: fit-content;
     position: absolute;
     bottom: 75%;
@@ -33,16 +33,15 @@ a {
 
 .youtube-image {
     width: 100%;
-    padding: 0.5em;
+    padding: 0.3em;
 }
 
 .mobile {
     left: 4%;
     height: fit-content;
-    width: 20em;
+    width: 12em;
 }
 
 .frame-mobile {
-    height: 15em;
-    width: 20em;
+    height: fit-content;
 }
