@@ -173,19 +173,6 @@ header {
     text-decoration: none !important;
 }
 
-
-/*Modal*/
-
-.table-contents {
-    width: 1em;
-}
-
-.search-container {
-    text-align: center;
-    padding: 8px 16px;
-    float: left;
-}
-
 .magazine-viewport .container {
     position: absolute;
     top: 48%;

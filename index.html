@@ -22,25 +22,28 @@
 
                 <ul class="navbar-items">
                     <li>
-
                         <a onclick="openSideBar()" class="nav-link" href="#menu-toggle" id="menu-toggle"><img class="icon" src="./pics/list-round-bullet-outline-icon.svg" alt="Contents">Contents</a>
                     </li>
                     <li>
-                        <a href="#"><img class="icon" src="./pics/gallery-grid-view-icon.svg" alt="Overview">Overview</a>
+                        <a id="open-modal" href="#"><img class="icon" src="./pics/gallery-grid-view-icon.svg" alt="Overview">Overview</a>
+
                     </li>
                     <li>
                         <a href="#"><img class="icon" src="./pics/move-down-icon.svg" alt="Download">Download as PDF</a>
                     </li>
-
                 </ul>
             </div>
-
         </nav>
-
 
     </header>
     <div class="line-header"></div>
-
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Modal Title</h2>
+            <p>Modal content goes here...</p>
+        </div>
+    </div>
     <div id="canvas">
         <!-- Sidebar -->
         <div id="sidebar-wrapper" class="sidebar">
@@ -191,27 +194,6 @@
         </div>
         <div class="magazine-viewport">
             <div class="container">
-
-                <!--<div>
-                    <a href="https://www.instagram.com/">
-                        <div id="instacard" class="instacard">
-                            <div id="header" class="instacard-header">
-                                <span class="instacard-actions">...</span>
-                                <img src="./images/profile.png" class="instacard-profile-image" alt="logo">
-                                <span class="instacard-profile-name">Namexxxx</span>
-                            </div>
-                            <div id="image">
-                                <img src="./images/image.png" class="instacard-image" alt="image">
-                            </div>
-                            <div id="actions">
-                                <img src="./pics/instagram-like-action.svg" alt="instagram-like-action" class="instagram-like">
-                                <img src="./pics/instagram-comment-action.svg" alt="instagram-comment-action" class="instagram-comment">
-                                <img src="./pics/instagram-send-action.svg" alt="instagram-send-action" class="instagram-send">
-                                <img src="./pics/instagram-save-action.svg" alt="instagram-save-action" class="instagram-save">
-                            </div>
-                        </div>
-                    </a>
-                </div>-->
 
                 <div id="youtube" class="youtube">
                     <a href="https://youtu.be/XNrTIQjHuKs">
@@ -660,10 +642,12 @@
                 "js/zoom.min.js",
                 "js/magazine.js",
                 "js/sidebar.js",
+                "js/modal.js",
 
                 "css/magazine.css",
                 "css/sidebar.css",
                 "css/youtube_card.css",
+                "css/modal.css"
 
 
             ],
