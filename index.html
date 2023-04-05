@@ -10,277 +10,40 @@
     <script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
     <script type="text/javascript" src="js/hash.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <!-- Include Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <a type="button" class="btn btn-link" style="color: #fff;" data-toggle="modal" data-target="#exampleModalLong">
-                            View
-                        </a>
-                    <!-- Modal -->
-                    <div class="modal fade " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content">
 
-                                <div class="modal-body">
-                                    <div class="container-fluid">
-                                        <div class="thumbnails">
-                                            <div>
-                                                <ul>
-                                                    <li class="i">
-                                                        <img src="pages/1.png" width="100" width="76" class="page-1">
+    <header id="header">
+        <nav>
 
-                                                    </li>
-                                                    <li class="d">
-                                                        <img src="pages/2.png" width="100" width="76" class="page-2">
-                                                        <img src="pages/3.png" width="100" width="76" class="page-3">
+            <div class="navbar">
 
-                                                    </li>
-                                                    <li class="d">
-                                                        <img src="pages/4.png" width="100" width="76" class="page-4">
-                                                        <img src="pages/5.png" width="100" width="76" class="page-5">
+                <ul class="navbar-items">
+                    <li>
 
-                                                    </li>
-                                                    <li class="d">
-                                                        <img src="pages/6.png" width="100" width="76" class="page-6">
-                                                        <img src="pages/7.png" width="100" width="76" class="page-7">
-
-                                                    </li>
-                                                    <li class="d">
-                                                        <img src="pages/8.png" width="100" width="76" class="page-8">
-                                                        <img src="pages/9.png" width="100" width="76" class="page-9">
-
-                                                    </li>
-                                                    <li class="d">
-                                                        <img src="pages/10.png" width="100" width="76" class="page-10">
-                                                        <img src="pages/11.png" width="100" width="76" class="page-11">
-
-                                                    </li>
-                                                    <li class="d">
-                                                        <img src="pages/12.png" width="100" width="76" class="page-12">
-                                                        <img src="pages/13.png" width="100" width="76" class="page-13">
-
-                                                    </li>
-                                                    <li class="d">
-                                                        <img src="pages/14.png" width="100" width="76" class="page-14">
-                                                        <img src="pages/15.png" width="100" width="76" class="page-15">
-
-                                                    </li>
-                                                    <li class="d">
-                                                        <img src="pages/16.png" width="100" width="76" class="page-16">
-                                                        <img src="pages/17.png" width="100" width="76" class="page-17">
-
-                                                    </li>
-                                                    <li class="d">
-                                                        <img src="pages/18.png" width="100" width="76" class="page-18">
-                                                        <img src="pages/19.png" width="100" width="76" class="page-19">
-
-                                                    </li>
-                                                    <li class="d">
-                                                        <img src="pages/20.png" width="100" width="76" class="page-20">
-                                                        <img src="pages/21.png" width="100" width="76" class="page-21">
-
-                                                    </li>
-                                                    <li class="d">
-                                                        <img src="pages/22.png" width="100" width="76" class="page-22">
-                                                        <img src="pages/23.png" width="100" width="76" class="page-23">
-
-                                                    </li>
-                                                    <li class="d">
-                                                        <img src="pages/24.png" width="100" width="76" class="page-24">
-                                                        <img src="pages/25.png" width="100" width="76" class="page-25">
-
-                                                    </li>
-                                                    <li class="d">
-                                                        <img src="pages/26.png" width="100" width="76" class="page-26">
-                                                        <img src="pages/27.png" width="100" width="76" class="page-27">
-
-                                                    </li>
-                                                    <li class="i">
-                                                        <img src="pages/28.png" width="100" width="76" class="page-28">
-
-                                                    </li>
-                                                    <ul>
-                                                        <div>
-                                                        </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </li>
-                <li class="nav-item">
-                    <a onclick="SidebarAction()" class="nav-link" href="#menu-toggle" id="menu-toggle">Contents</a>
-                </li>
+                        <a onclick="SidebarAction()" class="nav-link" href="#menu-toggle" id="menu-toggle"><img class="icon" src="./pics/list-round-bullet-outline-icon.svg" alt="Contents">Contents</a>
+                    </li>
+                    <li>
+                        <a href="#"><img class="icon" src="./pics/gallery-grid-view-icon.svg" alt="Overview">Overview</a>
+                    </li>
+                    <li>
+                        <a href="#"><img class="icon" src="./pics/move-down-icon.svg" alt="Download">Download as PDF</a>
+                    </li>
 
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" id="pageInput" type="search" placeholder="Search page">
-                    <button class="btn btn-secondary my-2 my-sm-0" onclick="getPage();" type="button">
-                        Search
-                    </button>
-                </form>
-                </div>
-    </nav>
+            </div>
+
+        </nav>
+
+
+    </header>
+    <div class="line-header"></div>
 
     <div id="canvas">
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li>
-                    <a href="#page/2">Page
-                            <span>2</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="#page/3">Page
-                            <span>3</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="#page/4">Page
-                            <span>4</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="#page/5">Page
-                            <span>5</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="#page/6">Page
-                            <span>6</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="#page/7">Page
-                            <span>7</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="#page/8">Page
-                            <span>8</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="#page/9">Page
-                            <span>9</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="#page/10">Page
-                            <span>10</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="#page/11">Page
-                            <span>11</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="#page/12">Page
-                            <span>12</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="#page/13">Page
-                            <span>13</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="#page/14">Page
-                        <span>14</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#page/15">Page
-                        <span>15</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#page/16">Page
-                        <span>16</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#page/17">Page
-                        <span>17</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#page/18">Page
-                            <span>18</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="#page/19">Page
-                            <span>19</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="#page/20">Page
-                            <span>20</span>
-                        </a>
-                </li>
-                <li>
-                    <a href="#page/21">Page
-                        <span>21</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#page/22">Page
-                        <span>22</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#page/23">Page
-                        <span>23</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#page/24">Page
-                        <span>24</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#page/25">Page
-                        <span>25</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#page/26">Page
-                        <span>26</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#page/27">Page
-                        <span>27</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#page/28">Page
-                        <span>28</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#page/28">Page
-                        <span></span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+
         <div class="magazine-viewport">
             <div class="container">
 
@@ -329,6 +92,33 @@
         </div>
     </div>
 
+    <div class="line-footer"></div>
+    <footer>
+        <div class="footer">
+            <ul class="footer-items">
+                <li>
+                    <a href="#"><img class="footer-icon-jump" src="./pics/step-backward-icon.svg"></a>
+                </li>
+                <li>
+                    <a href="#"><img class="footer-icon-next-page" src="./pics/triangle-left-arrow-icon.svg"></a>
+                </li>
+                <li>
+                    <div class="current-page-box">
+                        <span class="current-pages" id="current-pages">11-12</span>
+                        <span>/</span>
+                        <span class="amount-of-pages" id="amount-of-pages">28</span>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><img class="footer-icon-next-page" src="./pics/triangle-right-arrow-icon.svg"></a>
+                </li>
+                <li>
+                    <a href="#"><img class="footer-icon-jump" src="./pics/step-forward-icon.svg"></a>
+                </li>
+
+            </ul>
+        </div>
+    </footer>
     <script type="text/javascript">
         var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
         if (window.innerWidth < 1440) {
@@ -738,14 +528,14 @@
             both: [
                 "js/zoom.min.js",
                 "js/magazine.js",
+                "js/sidebar.js",
+
                 "css/magazine.css",
                 "css/style.css",
                 "css/sidebar.css",
                 "css/youtube_card.css",
 
-                "js/bootstrap.min.js",
-                "js/sidebar.js",
-                "js/bootstrap.min.js.map",
+
             ],
             complete: loadApp,
         });
