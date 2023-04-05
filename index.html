@@ -213,11 +213,6 @@
                     </a>
                 </div>-->
 
-                <div class="magazine">
-                    <div ignore="1" class="next-button"></div>
-                    <div ignore="1" class="previous-button"></div>
-                </div>
-
                 <div id="youtube" class="youtube">
                     <a href="https://youtu.be/XNrTIQjHuKs">
 
@@ -232,6 +227,10 @@
                     </a>
                 </div>
 
+                <div class="magazine">
+                    <div ignore="1" class="next-button"></div>
+                    <div ignore="1" class="previous-button"></div>
+                </div>
 
             </div>
         </div>
@@ -330,9 +329,9 @@
 
                 when: {
                     turning: function(event, page, view) {
-                        $(".instacard").hide();
+                        //$(".instacard").hide();
                         $(".youtube").hide();
-                        document.getElementById("instacard").style.zIndex = 0;
+                        document.getElementById("youtube").style.zIndex = 0;
 
                         var book = $(this),
                             currentPage = book.turn("page"),
@@ -357,9 +356,9 @@
 
                     turned: function(event, page, view) {
                         //$(".instacard").hide();
-                        document.getElementById("instacard").style.zIndex = 0;
+                        document.getElementById("youtube").style.zIndex = 0;
                         if (page > 1 && page < 28) {
-                            document.getElementById("current-pages").innerHTML = page.toString() + '-' + (page + 1).toString;
+                            document.getElementById("current-pages").innerHTML = page.toString() + '-' + (page + 1).toString();
                         } else {
                             document.getElementById("current-pages").innerHTML = page;
                         }
@@ -371,9 +370,9 @@
 
                         if (page == 1) {
                             // $(this).turn('peel', 'br');
-                            document.getElementById("instacard").style.zIndex = 1;
+                            document.getElementById("youtube").style.zIndex = 1;
                             if (!mobile) {
-                                $(".instacard").show();
+                                $(".youtube").show();
 
                             }
 
@@ -381,37 +380,9 @@
 
                             if (page == 28) {
 
-                                if (window.innerWidth >= 1440 && window.innerWidth < 2560) {
-                                    $(".youtube").css('left', '20%');
-                                    $(".youtube").css('width', '37em');
-                                }
-                                if (mobile) {
-                                    if (window.innerWidth >= 768 && window.innerWidth <= 1024) {
-                                        $(".youtube").css('left', '20%');
-                                        $(".youtube").css('width', '37em');
-                                    } else {
-                                        if (window.innerWidth > 320 && window.innerWidth < 425) {
-                                            $(".youtube").css('left', '5%');
-                                            $(".youtube").css('width', '18em');
-                                            $(".youtube-image").addClass("frame-mobile");
-                                        }
-                                        if (window.innerWidth == 425) {
-                                            $(".youtube").css('width', '18em');
-                                            $(".youtube").css('left', '6%');
-                                        }
-
-                                        if (window.innerWidth <= 320) {
-                                            $(".youtube").css('left', '5%');
-                                            $(".youtube-image").addClass("frame-mobile");
-                                            $(".youtube").css('bottom', '85%');
-                                            $(".youtube").css('width', '15em');
-                                        }
-                                    }
-
-                                }
                                 $(".youtube").show();
                             } else {
-                                $(".youtube").hide();
+                                //$(".youtube").hide();
                             }
 
                         }
@@ -456,7 +427,7 @@
                             .removeClass("zoom-icon-in")
                             .addClass("zoom-icon-out");
                         //$(".instacard").hide();
-                        document.getElementById("instacard").style.zIndex = 0;
+                        document.getElementById("youtube").style.zIndex = 0;
 
                         if (!window.escTip && !$.isTouch) {
                             escTip = true;
@@ -490,9 +461,9 @@
                             $(".magazine").addClass("animated").removeClass("zoom-in");
                             resizeViewport();
                             if (!mobile) {
-                                $(".instacard").show();
+                                $(".youtube").show();
                             }
-                            document.getElementById("instacard").style.zIndex = 0;
+                            document.getElementById("youtube").style.zIndex = 0;
                         }, 0);
                     },
                 },
@@ -691,7 +662,6 @@
                 "js/sidebar.js",
 
                 "css/magazine.css",
-                "css/style.css",
                 "css/sidebar.css",
                 "css/youtube_card.css",
 
