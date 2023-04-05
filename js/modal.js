@@ -7,10 +7,7 @@ openModalBtn.onclick = function() {
     modal.style.display = "block";
 }
 
-// Close the modal
-closeModalBtn.onclick = function() {
-    modal.style.display = "none";
-}
+
 
 // Close the modal if user clicks outside of it
 window.onclick = function(event) {
@@ -18,3 +15,13 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+const element = document.querySelector('#thumbnails-items');
+
+element.addEventListener('click', function() {
+    // hide the element
+    modal.style.display = "none";
+
+
+});

@@ -189,12 +189,13 @@ header {
     top: -400px;
 }
 
-@media only screen and (max-width: 400px) {
+
+/*@media only screen and (max-width: 400px) {
     .magazine-viewport .magazine {
         width: 1222px;
         height: 800px;
     }
-}
+}*/
 
 .magazine-viewport .page {
     width: 611px;
@@ -368,6 +369,7 @@ header {
 
 .thumbnails {
     position: relative;
+    text-align: center;
 }
 
 .thumbnails>div {
@@ -378,7 +380,7 @@ header {
 .thumbnails ul {
     margin: 0;
     padding: 0;
-    text-align: center;
+    /*text-align: center;*/
     /* -webkit-transform: scale3d(0.5, 0.5, 1);
     -moz-transform: scale3d(0.5, 0.5, 1);
     -o-transform: scale3d(0.5, 0.5, 1);

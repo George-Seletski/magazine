@@ -39,9 +39,48 @@
     <div class="line-header"></div>
     <div id="modal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Modal Title</h2>
-            <p>Modal content goes here...</p>
+            <h2>Views</h2>
+            <div class="thumbnails">
+                <div id="thumbnails-items">
+                    <ul>
+                        <li class="i">
+                            <img src="pages/1.png" width="100" width="76" class="page-1">
+
+                        </li>
+                        <li class="d">
+                            <img src="pages/2.png" width="100" width="76" class="page-2">
+                        </li>
+                        <li class="d">
+                            <img src="pages/3.png" width="100" width="76" class="page-3">
+                        </li>
+                        <li class="d">
+                            <img src="pages/4.png" width="100" width="76" class="page-4">
+                        </li>
+                        <li class="d">
+                            <img src="pages/5.png" width="100" width="76" class="page-5">
+                        </li>
+                        <li class="d">
+                            <img src="pages/6.png" width="100" width="76" class="page-6">
+                        </li>
+                        <li class="d">
+                            <img src="pages/7.png" width="100" width="76" class="page-7">
+                        </li>
+                        <li class="d">
+                            <img src="pages/8.png" width="100" width="76" class="page-8">
+                        </li>
+
+                        <li class="d">
+                            <img src="pages/9.png" width="100" width="76" class="page-9">
+                        </li>
+                        <li class="i">
+                            <img src="pages/28.png" width="100" width="76" class="page-28">
+
+                        </li>
+                        <ul>
+                            <div>
+                            </div>
+                </div>
+            </div>
         </div>
     </div>
     <div id="canvas">
@@ -372,7 +411,6 @@
 
                     missing: function(event, pages) {
                         // Add pages that aren't in the magazine
-
                         for (var i = 0; i < pages.length; i++) addPage(pages[i], $(this));
                     },
                 },
