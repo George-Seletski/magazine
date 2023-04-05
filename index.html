@@ -23,7 +23,7 @@
                 <ul class="navbar-items">
                     <li>
 
-                        <a onclick="SidebarAction()" class="nav-link" href="#menu-toggle" id="menu-toggle"><img class="icon" src="./pics/list-round-bullet-outline-icon.svg" alt="Contents">Contents</a>
+                        <a onclick="openSideBar()" class="nav-link" href="#menu-toggle" id="menu-toggle"><img class="icon" src="./pics/list-round-bullet-outline-icon.svg" alt="Contents">Contents</a>
                     </li>
                     <li>
                         <a href="#"><img class="icon" src="./pics/gallery-grid-view-icon.svg" alt="Overview">Overview</a>
@@ -43,11 +43,156 @@
 
     <div id="canvas">
         <!-- Sidebar -->
+        <div id="sidebar-wrapper" class="sidebar">
+            <ul class="sidebar-items">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeSideBar()">&times;</a>
+                <li>
+                    <a href="#page/1">PAGE
+                        <span>...................</span>1
+                    </a>
+                </li>
+                <li>
+                    <a href="#page/2">Page
+                <span>2</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/3">Page
+                <span>3</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/4">Page
+                <span>4</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/5">Page
+                <span>5</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/6">Page
+                <span>6</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/7">Page
+                <span>7</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/8">Page
+                <span>8</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/9">Page
+                <span>9</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/10">Page
+                <span>10</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/11">Page
+                <span>11</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/12">Page
+                <span>12</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/13">Page
+                <span>13</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/14">Page
+                <span>14</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/15">Page
+                <span>15</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/16">Page
+                <span>16</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/17">Page
+                <span>17</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/18">Page
+                <span>18</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/19">Page
+                <span>19</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/20">Page
+                <span>20</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/21">Page
+                <span>21</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/22">Page
+                <span>22</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/23">Page
+                <span>23</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/24">Page
+                <span>24</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/25">Page
+                <span>25</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/26">Page
+                <span>26</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/27">Page
+                <span>27</span>
+            </a>
+                </li>
+                <li>
+                    <a href="#page/28">Page
+                <span>28</span>
+            </a>
+                </li>
 
+            </ul>
+        </div>
         <div class="magazine-viewport">
             <div class="container">
 
-                <div>
+                <!--<div>
                     <a href="https://www.instagram.com/">
                         <div id="instacard" class="instacard">
                             <div id="header" class="instacard-header">
@@ -66,7 +211,7 @@
                             </div>
                         </div>
                     </a>
-                </div>
+                </div>-->
 
                 <div class="magazine">
                     <div ignore="1" class="next-button"></div>
@@ -97,10 +242,12 @@
         <div class="footer">
             <ul class="footer-items">
                 <li>
-                    <a href="#"><img class="footer-icon-jump" src="./pics/step-backward-icon.svg"></a>
+
+                    <a href="#" id="footer-link"><img class="footer-icon-jump-first" src="./pics/step-backward-icon.svg"></a>
+
                 </li>
                 <li>
-                    <a href="#"><img class="footer-icon-next-page" src="./pics/triangle-left-arrow-icon.svg"></a>
+                    <div id="footer-icon-previous-page"><img class="footer-icon-previous-page" src="./pics/triangle-left-arrow-icon.svg"></div>
                 </li>
                 <li>
                     <div class="current-page-box">
@@ -110,10 +257,12 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#"><img class="footer-icon-next-page" src="./pics/triangle-right-arrow-icon.svg"></a>
+                    <div id="footer-icon-next-page"><img class="footer-icon-next-page" src="./pics/triangle-right-arrow-icon.svg"></div>
                 </li>
                 <li>
-                    <a href="#"><img class="footer-icon-jump" src="./pics/step-forward-icon.svg"></a>
+
+                    <a href="#page/28" id="footer-link"><img class="footer-icon-jump-last" src="./pics/step-forward-icon.svg"></a>
+
                 </li>
 
             </ul>
@@ -123,7 +272,7 @@
         var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
         if (window.innerWidth < 1440) {
 
-            $('.inscard').hide();
+            $('.instcard').hide();
             $('.youtube').hide();
             $('.container').css('left', 0);
             $('.magazine').css('left', 0);
@@ -209,6 +358,12 @@
                     turned: function(event, page, view) {
                         //$(".instacard").hide();
                         document.getElementById("instacard").style.zIndex = 0;
+                        if (page > 1 && page < 28) {
+                            document.getElementById("current-pages").innerHTML = page.toString() + '-' + (page + 1).toString;
+                        } else {
+                            document.getElementById("current-pages").innerHTML = page;
+                        }
+
 
                         disableControls(page);
 
@@ -231,7 +386,7 @@
                                     $(".youtube").css('width', '37em');
                                 }
                                 if (mobile) {
-                                    if (window.innerWidth >= 768 && window.innerWidth <= 1440) {
+                                    if (window.innerWidth >= 768 && window.innerWidth <= 1024) {
                                         $(".youtube").css('left', '20%');
                                         $(".youtube").css('width', '37em');
                                     } else {
@@ -448,7 +603,7 @@
             }
 
             // Events for the next button
-
+            //big button
             $(".next-button")
                 .bind($.mouseEvents.over, function() {
                     $(this).addClass("next-button-hover");
@@ -466,7 +621,12 @@
                     $(".magazine").turn("next");
                 });
 
-            // Events for the next button
+            //footer button
+
+            $("#footer-icon-next-page").click(function() {
+                $(".magazine").turn("next");
+            });
+            // Events for the previus button
 
             $(".previous-button")
                 .bind($.mouseEvents.over, function() {

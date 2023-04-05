@@ -1,10 +1,13 @@
-function SidebarAction() {
-    var x = document.getElementById("sidebar-wrapper");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
+function openSideBar() {
+    document.getElementById("sidebar-wrapper").style.display = "block";
+    document.getElementById("canvas").style.marginLeft = "15%";
+    //document.getElementById("sidebar-wrapper").style.marginLeft = "25%";
+}
+
+function closeSideBar() {
+    document.getElementById("sidebar-wrapper").style.display = "none";
+    document.getElementById("canvas").style.marginLeft = "0";
+
 }
 
 function getPage() {
@@ -271,8 +274,8 @@ function resizeViewport() {
             if ($('.magazine').turn('page') == 1)
                 $('.magazine').turn('peel', 'br');
 
-            $('.next-button').css({ height: bound.height, backgroundPosition: '-38px ' + (bound.height / 2 - 32 / 2) + 'px' });
-            $('.previous-button').css({ height: bound.height, backgroundPosition: '-4px ' + (bound.height / 2 - 32 / 2) + 'px' });
+            $('.next-button').css({ height: 100, backgroundPosition: '-37px ' + '50%', top: '40%' });
+            $('.previous-button').css({ height: 100, backgroundPosition: '-4px ' + '50%' });
         }
 
         $('.magazine').css({ top: -bound.height / 2, left: -(bound.width - 15) / 2 });
