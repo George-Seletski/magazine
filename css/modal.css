@@ -12,13 +12,13 @@
     height: 100%;
     /* Full height */
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
     /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
 }
 
 .modal-content {
-    overflow-y: none;
     -webkit-overflow-scrolling: touch;
     border-radius: 5px;
     background-color: #fefefead;
