@@ -87,6 +87,7 @@ header {
 
 .modal {
     background: rgba(255, 255, 255, 0.384);
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 }
 
