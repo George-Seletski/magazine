@@ -9,7 +9,7 @@ body {
 }
 
 #canvas {
-    height: calc(100vh - 70px);
+    height: calc(100vh - 75px);
     /*height: 100%;*/
     transition: margin-left .5s;
 }
@@ -34,7 +34,7 @@ header {
     align-items: center;
     margin: auto;
     width: 100%;
-    padding-top: 3px;
+    padding-top: 5px;
 }
 
 .navbar-items {
