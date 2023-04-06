@@ -311,17 +311,28 @@
     </footer>
     <script type="text/javascript">
         var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
-        if (window.innerWidth < 1440) {
+        if (window.innerWidth < 1024) {
 
             $('.instcard').hide();
             $('.youtube').hide();
             $('.container').css('left', 0);
             $('.magazine').css('left', 0);
+        } else {
+            if (window.innerWidth == 1024) {
+                $('.youtube').show();
+                $('.youtube').css('left', '-26%');
+                $('.youtube').css('width', '300px');
+                $('.youtube').css('height', '200px');
+                $('.youtube-image').css('height', '190px');
+                $('.container').css('left', '32%');
+
+
+            }
         }
 
         function loadApp() {
             $("#canvas").fadeIn(100);
-            $('.youtube').hide();
+            $('#youtube').show();
             var flipbook = $(".magazine");
 
             // Check if the CSS was already loaded
