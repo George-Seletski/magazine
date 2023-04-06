@@ -11,14 +11,16 @@
     /* Full width */
     height: 100%;
     /* Full height */
-    overflow: scroll !important;
+    /*overflow: scroll !important;*/
     -webkit-overflow-scrolling: touch;
     /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
+    overflow: visible;
 }
 
 .modal-content {
+    overflow: auto;
     border-radius: 5px;
     background-color: #fefefead;
     margin: 5% auto;
