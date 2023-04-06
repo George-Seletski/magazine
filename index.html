@@ -312,12 +312,16 @@
     <script type="text/javascript">
         var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
         if (window.innerWidth < 1440) {
-
+            if (window.innerWidth < 768) {
+                $('.navbar-items').css('display', 'block');
+            }
             $('.instcard').hide();
             $('.youtube').hide();
             $('.container').css('left', 0);
             $('.magazine').css('left', 0);
         } else {
+
+
             /*if (window.innerWidth == 1024) {
                 $('.youtube').show();
                 $('.youtube').css('left', '-26%');
