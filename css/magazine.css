@@ -9,7 +9,8 @@ body {
 }
 
 #canvas {
-    height: calc(100vh - 50px);
+    /*height: calc(100vh - 70px);*/
+    height: 100%;
     transition: margin-left .5s;
 }
 
@@ -25,6 +26,7 @@ header {
     padding-right: 5px;
     padding-bottom: 5px;
     background-color: #dda4ab;
+    height: 30px;
 }
 
 .navbar {
@@ -175,7 +177,7 @@ header {
 
 .magazine-viewport .container {
     position: absolute;
-    top: 48%;
+    top: 45%;
     left: 47.7%;
     width: 1222px;
     height: 800px;
@@ -548,6 +550,7 @@ header {
     background-color: #dda4ab;
     color: rgb(0, 0, 0);
     text-align: center;
+    height: 34px;
 }
 
 .footer-items {

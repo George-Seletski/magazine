@@ -1,6 +1,6 @@
 function openSideBar() {
     document.getElementById("sidebar-wrapper").style.display = "block";
-    document.getElementById("canvas").style.marginLeft = "15%";
+    document.getElementById("canvas").style.marginLeft = "10%";
     //document.getElementById("sidebar-wrapper").style.marginLeft = "25%";
 }
 
