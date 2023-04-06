@@ -9,8 +9,8 @@ body {
 }
 
 #canvas {
-    /*height: calc(100vh - 70px);*/
-    height: 100%;
+    height: calc(100vh - 70px);
+    /*height: 100%;*/
     transition: margin-left .5s;
 }
 
