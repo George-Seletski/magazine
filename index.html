@@ -503,7 +503,10 @@
                             $(".magazine").addClass("animated").removeClass("zoom-in");
                             resizeViewport();
                             if (!mobile) {
-                                $(".youtube").show();
+                                if (page == 1) {
+                                    $(".youtube").show();
+                                }
+
                             }
                             document.getElementById("youtube").style.zIndex = 0;
                         }, 0);
