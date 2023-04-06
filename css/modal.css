@@ -19,7 +19,6 @@
 }
 
 .modal-content {
-    -webkit-overflow-scrolling: touch;
     border-radius: 5px;
     background-color: #fefefead;
     margin: 5% auto;
