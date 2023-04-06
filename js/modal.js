@@ -2,10 +2,16 @@ const modal = document.getElementById('modal');
 const openModalBtn = document.getElementById('open-modal');
 const closeModalBtn = document.getElementsByClassName('close')[0];
 
+
 // Open the modal
 openModalBtn.onclick = function() {
+        modal.style.display = "block";
+    }
+    //Open the Modal from footer
+function openModalfooter() {
     modal.style.display = "block";
 }
+
 
 
 
