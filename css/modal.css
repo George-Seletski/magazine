@@ -11,7 +11,7 @@
     /* Full width */
     height: 100%;
     /* Full height */
-    overflow: auto;
+    overflow: scroll !important;
     -webkit-overflow-scrolling: touch;
     /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.4);
