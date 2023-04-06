@@ -1,6 +1,12 @@
 function openSideBar() {
-    document.getElementById("sidebar-wrapper").style.display = "block";
-    document.getElementById("canvas").style.marginLeft = "10%";
+    if (window.innerWidth < 768) {
+        document.getElementById("sidebar-wrapper").style.display = "block";
+        document.getElementById("canvas").style.marginLeft = "50%";
+    } else {
+        document.getElementById("sidebar-wrapper").style.display = "block";
+        document.getElementById("canvas").style.marginLeft = "10%";
+    }
+
     //document.getElementById("sidebar-wrapper").style.marginLeft = "25%";
 }
 
