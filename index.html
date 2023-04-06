@@ -311,14 +311,14 @@
     </footer>
     <script type="text/javascript">
         var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
-        if (window.innerWidth < 1024) {
+        if (window.innerWidth < 1440) {
 
             $('.instcard').hide();
             $('.youtube').hide();
             $('.container').css('left', 0);
             $('.magazine').css('left', 0);
         } else {
-            if (window.innerWidth == 1024) {
+            /*if (window.innerWidth == 1024) {
                 $('.youtube').show();
                 $('.youtube').css('left', '-26%');
                 $('.youtube').css('width', '300px');
@@ -327,7 +327,7 @@
                 $('.container').css('left', '32%');
 
 
-            }
+            }*/
         }
 
         function loadApp() {
