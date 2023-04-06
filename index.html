@@ -9,6 +9,7 @@
 
     <script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
     <script type="text/javascript" src="js/hash.js"></script>
+    <script type="text/javascript" src="js/instafeed.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 
 </head>
@@ -252,6 +253,25 @@
                     <div ignore="1" class="next-button"></div>
                     <div ignore="1" class="previous-button"></div>
                 </div>
+                <!--<div id="instacard" class="instacard">
+
+
+                    <div id="image">
+                        <div id="instafeed"></div>
+                    </div>
+
+                    <div id="actions">
+                        <div id="instacard-footer" class="instacard-footer">
+                            <img src="./images/logo.gif" class="instacard-profile-image" alt="logo">
+                            <span class="instacard-profile-name">Namexxxx</span>
+                            <div class="follow-btn"> Follow</div>
+                            <span class="instacard-actions"> <img src="./images/instagram-logo.gif" width="50px" alt="instagram-logo" ></span>
+                        </div>
+
+
+
+                    </div>
+                </div>-->
 
             </div>
         </div>
@@ -423,6 +443,7 @@
                 flipbook: $(".magazine"),
 
                 max: function() {
+                    $(".youtube").hide();
                     return largeMagazineWidth() / $(".magazine").width();
                 },
 
@@ -682,6 +703,7 @@
                 "js/magazine.js",
                 "js/sidebar.js",
                 "js/modal.js",
+                "js/instagram.js",
 
                 "css/magazine.css",
                 "css/sidebar.css",
