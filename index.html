@@ -643,7 +643,9 @@
                 $(".magazine").turn("next");
             });
             // Events for the previus button
-
+            $("#footer-icon-previous-page").click(function() {
+                $(".magazine").turn("previous");
+            });
             $(".previous-button")
                 .bind($.mouseEvents.over, function() {
                     $(this).addClass("previous-button-hover");
