@@ -47,7 +47,7 @@ window.onload = function() {
                 image.style.width = '200px';
                 image.style.height = '250px';
                 listItem.classList.add(className);
-                image.classList.add(`page-${i}`);
+                image.classList.add(`page-${i+1}`);
                 listItem.appendChild(image);
                 //console.log(listItem);
                 unorderedList.appendChild(listItem);

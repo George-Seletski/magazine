@@ -44,6 +44,8 @@
             <h2>Overview</h2>
             <div class="thumbnails">
                 <div id="thumbnails-items">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeSideBar()">&times;</a>
+
                 </div>
 
             </div>
@@ -114,7 +116,7 @@
                     <div id="footer-icon-previous-page"><img class="footer-icon-previous-page" src="./pics/triangle-left-arrow-icon.svg" loading="lazy" alt="step previous page"></div>
                 </li>
                 <li>
-                    <div class="current-page-box" onclick="openModalfooter()">
+                    <div class="current-page-box" onclick="openModal()">
 
                         <span class="current-pages" id="current-pages">11-12</span>
                         <span>/</span>
@@ -232,6 +234,7 @@
 
                         Hash.go("page/" + page).update();
 
+
                         // Show and hide navigation buttons
 
                         disableControls(page);
@@ -260,7 +263,7 @@
                         $(this).turn("center");
 
                         if (page == 1) {
-                            // $(this).turn('peel', 'br');
+                            $(this).turn('peel', 'br');
                             document.getElementById("youtube").style.zIndex = 1;
                             if (!mobile) {
                                 $(".youtube").show();
@@ -269,7 +272,7 @@
 
                         } else {
 
-                            if (page == 28) {
+                            if (page > 1) {
 
                                 $(".youtube").hide();
                             } else {
@@ -401,13 +404,16 @@
             Hash.on("^page\/([0-9]*)$", {
                 yep: function(path, parts) {
                     var page = parts[1];
-
+                    console.log(parts[1], parts, path);
                     if (page !== undefined) {
-                        if ($(".magazine").turn("is")) $(".magazine").turn("page", page);
+                        if ($(".magazine").turn("is"))
+                            $(".magazine").turn("page", page);
                     }
                 },
                 nop: function(path) {
-                    if ($(".magazine").turn("is")) $(".magazine").turn("page", 1);
+                    if ($(".magazine").turn("is"))
+                        $(".magazine").turn("page", 1);
+
                 },
             });
 
@@ -429,6 +435,7 @@
                     (page = /page-([0-9]+)/.exec($(event.target).attr("class")))
                 ) {
                     $(".magazine").turn("page", page[1]);
+                    console.log('thumbnails clicked', page[1]);
                 }
             });
 

@@ -1,6 +1,6 @@
 const modal = document.getElementById('modal');
 const openModalBtn = document.getElementById('open-modal');
-const closeModalBtn = document.getElementsByClassName('close')[0];
+//const closeModalBtn = document.getElementsByClassName('close')[0];
 
 
 // Open the modal
@@ -10,8 +10,9 @@ openModalBtn.onclick = function() {
     $('.modal').css('position', 'none');
 }
 
+
 //Open the Modal from footer
-function openModalfooter() {
+function openModal() {
     modal.style.display = "block";
     //$('#canvas').css('position', 'fixed');
     $('.modal').css('position', 'none');
@@ -26,7 +27,7 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-    $('.magazine-viewport').show();
+    //$('.magazine-viewport').show();
 }
 
 
