@@ -20,9 +20,9 @@ body {
 
 header {
     display: flex;
+    top: 0;
     justify-content: center;
     align-items: center;
-    padding-top: 2px;
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 5px;
@@ -34,7 +34,7 @@ header {
     align-items: center;
     margin: auto;
     width: 100%;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .navbar-items {
@@ -478,7 +478,7 @@ header {
 .thumbnails img {
     float: left;
     height: 150px;
-    width: 270px;
+    width: 100px;
 }
 
 .exit-message {

@@ -45,49 +45,49 @@
                 <div id="thumbnails-items">
                     <ul>
                         <li class="i">
-                            <img src="pages/1.png" width="100" width="76" class="page-1">
+                            <img src="pages/png/online_portfolio1.png" width="100" width="76" class="page-1">
 
                         </li>
                         <li class="d">
-                            <img src="pages/2.png" width="100" width="76" class="page-2">
+                            <img src="pages/png/online_portfolio2.png" width="100" width="76" class="page-2">
                         </li>
                         <li class="d">
-                            <img src="pages/3.png" width="100" width="76" class="page-3">
+                            <img src="pages/png/online_portfolio3.png" width="100" width="76" class="page-3">
                         </li>
                         <li class="d">
-                            <img src="pages/4.png" width="100" width="76" class="page-4">
+                            <img src="pages/png/online_portfolio4.png" width="100" width="76" class="page-4">
                         </li>
                         <li class="d">
-                            <img src="pages/5.png" width="100" width="76" class="page-5">
+                            <img src="pages/png/online_portfolio5.png" width="100" width="76" class="page-5">
                         </li>
                         <li class="d">
-                            <img src="pages/6.png" width="100" width="76" class="page-6">
+                            <img src="pages/png/online_portfolio6.png" width="100" width="76" class="page-6">
                         </li>
                         <li class="d">
-                            <img src="pages/7.png" width="100" width="76" class="page-7">
+                            <img src="pages/png/online_portfolio7.png" width="100" width="76" class="page-7">
                         </li>
                         <li class="d">
-                            <img src="pages/8.png" width="100" width="76" class="page-8">
-                        </li>
-
-                        <li class="d">
-                            <img src="pages/9.png" width="100" width="76" class="page-9">
-                        </li>
-                        <li class="d">
-                            <img src="pages/6.png" width="100" width="76" class="page-6">
-                        </li>
-                        <li class="d">
-                            <img src="pages/7.png" width="100" width="76" class="page-7">
-                        </li>
-                        <li class="d">
-                            <img src="pages/8.png" width="100" width="76" class="page-8">
+                            <img src="pages/png/online_portfolio8.png" width="100" width="76" class="page-8">
                         </li>
 
                         <li class="d">
-                            <img src="pages/9.png" width="100" width="76" class="page-9">
+                            <img src="pages/png/online_portfolio9.png" width="100" width="76" class="page-9">
+                        </li>
+                        <li class="d">
+                            <img src="pages/png/online_portfolio6.png" width="100" width="76" class="page-6">
+                        </li>
+                        <li class="d">
+                            <img src="pages/png/online_portfolio7.png" width="100" width="76" class="page-7">
+                        </li>
+                        <li class="d">
+                            <img src="pages/png/online_portfolio8.png" width="100" width="76" class="page-8">
+                        </li>
+
+                        <li class="d">
+                            <img src="pages/png/online_portfolio9.png" width="100" width="76" class="page-9">
                         </li>
                         <li class="i">
-                            <img src="pages/28.png" width="100" width="76" class="page-28">
+                            <img src="pages/png/online_portfolio28.png" width="100" width="76" class="page-28">
 
                         </li>
                         <ul>
@@ -296,7 +296,7 @@
             <ul class="footer-items">
                 <li>
 
-                    <a href="#" id="footer-link"><img class="footer-icon-jump-first" src="./pics/step-backward-icon.svg" loading="lazy" alt="jump first page"></a>
+                    <a href="#" id="footer-link-first"><img class="footer-icon-jump-first" src="./pics/step-backward-icon.svg" loading="lazy" alt="jump first page"></a>
 
                 </li>
                 <li>
@@ -315,7 +315,7 @@
                 </li>
                 <li>
 
-                    <a href="#page/28" id="footer-link"><img class="footer-icon-jump-last" src="./pics/step-forward-icon.svg" loading="lazy" alt="jump last page"></a>
+                    <a href="#" id="footer-link-last"><img class="footer-icon-jump-last" src="./pics/step-forward-icon.svg" loading="lazy" alt="jump last page"></a>
 
                 </li>
 
@@ -396,7 +396,7 @@
 
                 // The number of pages
 
-                pages: 28,
+                pages: 68,
 
                 // Events
 
@@ -409,6 +409,13 @@
                         var book = $(this),
                             currentPage = book.turn("page"),
                             pages = book.turn("pages");
+
+                        //add amount of pages in footer    
+                        $("#amount-of-pages").text(pages.toString());
+
+                        //set href to last page
+                        var href_val = '#page/' + pages.toString();
+                        $("#footer-link-last").attr("href", href_val);
 
                         // Update the current URI
 
@@ -430,7 +437,7 @@
                     turned: function(event, page, view) {
                         //$(".instacard").hide();
                         document.getElementById("youtube").style.zIndex = 0;
-                        if (page > 1 && page < 28) {
+                        if (page > 1 && page < 68) {
                             document.getElementById("current-pages").innerHTML = page.toString() + '-' + (page + 1).toString();
                         } else {
                             document.getElementById("current-pages").innerHTML = page;
