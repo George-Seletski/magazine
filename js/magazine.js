@@ -3,6 +3,7 @@ function openSideBar() {
         document.getElementById("sidebar-wrapper").style.display = "block";
         $("sidebar-wrapper").css('width', '100%');
 
+
         //document.getElementById("canvas").style.marginLeft = "50%";
 
     } else {
@@ -11,10 +12,14 @@ function openSideBar() {
         document.getElementById("canvas").style.marginLeft = "10%";
     }
 
+    $(".footer").css('z-index', '-1');
+    $(".line-footer").css('z-index', '-1');
     //document.getElementById("sidebar-wrapper").style.marginLeft = "25%";
 }
 
 function closeSideBar() {
+    $(".footer").css('z-index', '0');
+    $(".line-footer").css('z-index', '0');
     document.getElementById("sidebar-wrapper").style.display = "none";
     document.getElementById("canvas").style.marginLeft = "0";
     document.getElementById("canvas").style.display = "block";
