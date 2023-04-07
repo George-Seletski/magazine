@@ -5,11 +5,14 @@ const closeModalBtn = document.getElementsByClassName('close')[0];
 
 // Open the modal
 openModalBtn.onclick = function() {
-        modal.style.display = "block";
-    }
-    //Open the Modal from footer
+    modal.style.display = "block";
+    $('.magazine-viewport').hide();
+}
+
+//Open the Modal from footer
 function openModalfooter() {
     modal.style.display = "block";
+    $('.magazine-viewport').hide();
 }
 
 
@@ -20,6 +23,7 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+    $('.magazine-viewport').show();
 }
 
 
