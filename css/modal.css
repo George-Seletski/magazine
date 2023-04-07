@@ -1,5 +1,5 @@
 .modal {
-    display: none;
+    display: block;
     /* Hidden by default */
     position: fixed;
     /* Stay in place */
@@ -20,7 +20,7 @@
 }
 
 .modal-content {
-    overflow: auto;
+    /*overflow: auto;*/
     border-radius: 5px;
     background-color: #fefefead;
     margin: 5% auto;
