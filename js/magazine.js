@@ -1,9 +1,13 @@
 function openSideBar() {
     if (window.innerWidth < 768) {
         document.getElementById("sidebar-wrapper").style.display = "block";
-        document.getElementById("canvas").style.marginLeft = "50%";
+        $("sidebar-wrapper").css('width', '100%');
+
+        //document.getElementById("canvas").style.marginLeft = "50%";
+
     } else {
         document.getElementById("sidebar-wrapper").style.display = "block";
+
         document.getElementById("canvas").style.marginLeft = "10%";
     }
 
@@ -13,6 +17,7 @@ function openSideBar() {
 function closeSideBar() {
     document.getElementById("sidebar-wrapper").style.display = "none";
     document.getElementById("canvas").style.marginLeft = "0";
+    document.getElementById("canvas").style.display = "block";
 
 }
 
