@@ -6,13 +6,16 @@ const closeModalBtn = document.getElementsByClassName('close')[0];
 // Open the modal
 openModalBtn.onclick = function() {
     modal.style.display = "block";
-    $('.magazine-viewport').hide();
+    //$('#canvas').css('position', 'fixed');
+    $('.modal').css('position', 'none');
 }
 
 //Open the Modal from footer
 function openModalfooter() {
     modal.style.display = "block";
-    $('.magazine-viewport').hide();
+    //$('#canvas').css('position', 'fixed');
+    $('.modal').css('position', 'none');
+
 }
 
 
