@@ -49,7 +49,7 @@
 
     </header>
     <div class="line-header"></div>
-    <div id="modal" class="modal">
+    <div id="modal" class="modal" style="display: none;">
         <div class="modal-content">
             <h2>Overview</h2>
             <div class="thumbnails">
@@ -150,7 +150,8 @@
         $(window).on('load', function() {
             // Hide the preloader
             $(".preloader").fadeOut(2000, function() {
-                $(".navbar-items").fadeIn(1500);
+                $(".navbar-items").fadeIn(1000);
+                $(".navbar-items").css('display', 'flex');
                 $(".footer-items").fadeIn(1500);
                 $(".footer-items").css('display', 'flex');
             });
