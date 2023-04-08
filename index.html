@@ -77,7 +77,7 @@
 
                         <div id="image" class="youtube-image">
                             <!-- <img src="./images/image.png" class="youtube-image" alt="image">-->
-                            <iframe width="500" class="youtube-image" height="400" src="https://www.youtube.com/embed/XNrTIQjHuKs" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            <iframe width="500" class="youtube-image" height="400" src="https://www.youtube.com/embed/-Whq7-tdInw" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
 
@@ -131,7 +131,7 @@
 
                         <span class="current-pages" id="current-pages">11-12</span>
                         <span>/</span>
-                        <span class="amount-of-pages" id="amount-of-pages">28</span>
+                        <span class="amount-of-pages" id="amount-of-pages">68</span>
                     </div>
                 </li>
                 <li>
@@ -158,6 +158,9 @@
         });
 
         var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+
+
+
         if (window.innerWidth < 1440) {
             if (mobile) {
                 $('.navbar-items').css('display', 'block');
@@ -174,6 +177,7 @@
         function loadApp() {
             $("#canvas").fadeIn(1000);
             $('#youtube').show();
+
             var flipbook = $(".magazine");
 
             // Check if the CSS was already loaded
@@ -259,8 +263,20 @@
                     turned: function(event, page, view) {
                         //$(".instacard").hide();
                         document.getElementById("youtube").style.zIndex = 0;
+                        CheckPrevousButtoClicked();
+
                         if (page > 1 && page < 68) {
-                            document.getElementById("current-pages").innerHTML = page.toString();
+
+                            CheckPrevousButtoClicked(page);
+
+                            document.getElementById("current-pages").innerHTML = (page - 1).toString() + '-' + (page).toString();
+
+                            //document.getElementById("current-pages").innerHTML = (page).toString() + '-' + (page + 1).toString();
+
+                            //document.getElementById("current-pages").innerHTML = page.toString();
+
+
+
                         }
                         if (page === 1 || page === 68) {
                             document.getElementById("current-pages").innerHTML = page;
@@ -297,6 +313,7 @@
                     },
                 },
             });
+
 
             // Zoom.js
 
