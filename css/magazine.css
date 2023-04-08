@@ -177,6 +177,12 @@ header {
     letter-spacing: 2px;
 }
 
+@media screen and (max-width: 768px) {
+    .sidebar-items span {
+        letter-spacing: 0px;
+    }
+}
+
 .closebtn:hover {
     color: rgb(206, 200, 199);
     text-decoration: none !important;
