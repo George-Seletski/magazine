@@ -4,21 +4,11 @@
     box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
-}
-
 .instacard {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    border-radius: 5px;
-    width: 400px;
-    height: 525px;
     position: absolute;
-    bottom: 65%;
-    left: -46%;
-    z-index: 1;
+    padding: 10px;
+    left: 11em;
+    bottom: 31em;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -31,69 +21,8 @@ a {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.instacard-header {
-    height: 60px;
-    width: 100%;
-    vertical-align: middle;
-    padding: 16px;
-    margin: 0;
-    display: inline-block;
-}
-
-.instacard-profile-image {
-    float: left;
-    width: 32px;
-    height: 32px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-}
-
-.instacard-profile-name {
-    float: left;
-    margin-top: 0.5rem;
-    font-weight: bold;
-    color: #000;
-    margin-left: 1rem;
-}
-
-.instacard-actions {
-    float: right;
-    margin-top: 0.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #000;
-}
-
-.instacard-image {
-    width: 100%;
-}
-
-.instacard-image:hover {
-    filter: grayscale(50%);
-}
-
-.instagram-like,
-.instagram-comment,
-.instagram-send,
-.instagram-save {
-    height: 30px;
-    padding-left: 8px;
-    padding-top: 8px;
-}
-
-.instagram-save {
-    float: right;
-    padding-right: 8px;
-}
-
-.instacard.odd {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    border-radius: 5px;
-    width: 400px;
-    height: 525px;
-    position: absolute;
-    left: -10em;
-    bottom: 60em;
+@media screen and (max-width: 768px) {
+    .instacard {
+        left: 2.5em;
+    }
 }
