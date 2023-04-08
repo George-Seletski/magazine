@@ -104,6 +104,12 @@ header {
     margin-right: 10px;
 }
 
+
+/*.preload {
+    opacity: 0;
+    visibility: hidden;
+}*/
+
 .footer-icon-next-page,
 .footer-icon-previous-page {
     margin-right: 5px;

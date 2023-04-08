@@ -16,13 +16,23 @@
 </head>
 
 <body id="body">
-
+    <div class="preloader">
+        <div class="wrapperanimate">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="shadow-circle"></div>
+            <div class="shadow-circle"></div>
+            <div class="shadow-circle"></div>
+            <span>Loading</span>
+        </div>
+    </div>
     <header id="header">
         <nav>
 
             <div class="navbar">
 
-                <ul class="navbar-items">
+                <ul class="navbar-items" style="display: none;">
                     <li>
                         <a onclick="openSideBar()" class="nav-link" href="#menu-toggle" id="menu-toggle"><img class="icon" src="./pics/list-round-bullet-outline-icon.svg" loading="lazy" alt="Contents">Contents</a>
                     </li>
@@ -51,7 +61,7 @@
             </div>
         </div>
     </div>
-    <div id="canvas">
+    <div id="canvas" style="display: none;">
         <!-- Sidebar -->
         <div id="sidebar-wrapper" class="sidebar">
             <ul class="sidebar-items">
@@ -104,9 +114,10 @@
     </div>
 
     <div class="line-footer"></div>
-    <footer>
+
+    <footer id="footer">
         <div class="footer">
-            <ul class="footer-items">
+            <ul class="footer-items" style="display: none;">
                 <li>
 
                     <a href="#" id="footer-link-first"><img class="footer-icon-jump-first" src="./pics/step-backward-icon.svg" loading="lazy" alt="jump first page"></a>
@@ -124,11 +135,11 @@
                     </div>
                 </li>
                 <li>
-                    <div id="footer-icon-next-page"><img class="footer-icon-next-page" src="./pics/triangle-right-arrow-icon.svg" loading="lazy" alt="step next page"></div>
+                    <div id="footer-icon-next-page"><img class="footer-icon-next-page" src="./pics/triangle-right-arrow-icon.svg" alt="step next page"></div>
                 </li>
                 <li>
 
-                    <a href="#" id="footer-link-last"><img class="footer-icon-jump-last" src="./pics/step-forward-icon.svg" loading="lazy" alt="jump last page"></a>
+                    <a href="#" id="footer-link-last"><img class="footer-icon-jump-last" src="./pics/step-forward-icon.svg" alt="jump last page"></a>
 
                 </li>
 
@@ -136,6 +147,15 @@
         </div>
     </footer>
     <script type="text/javascript">
+        $(window).on('load', function() {
+            // Hide the preloader
+            $(".preloader").fadeOut(2000, function() {
+                $(".navbar-items").fadeIn(1500);
+                $(".footer-items").fadeIn(1500);
+                $(".footer-items").css('display', 'flex');
+            });
+        });
+
         var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
         if (window.innerWidth < 1440) {
             if (mobile) {
@@ -148,23 +168,10 @@
             $('.youtube').hide();
             $('.container').css('left', 0);
             $('.magazine').css('left', 0);
-        } else {
-
-
-            /*if (window.innerWidth == 1024) {
-                $('.youtube').show();
-                $('.youtube').css('left', '-26%');
-                $('.youtube').css('width', '300px');
-                $('.youtube').css('height', '200px');
-                $('.youtube-image').css('height', '190px');
-                $('.container').css('left', '32%');
-
-
-            }*/
         }
 
         function loadApp() {
-            $("#canvas").fadeIn(100);
+            $("#canvas").fadeIn(1000);
             $('#youtube').show();
             var flipbook = $(".magazine");
 
@@ -252,8 +259,9 @@
                         //$(".instacard").hide();
                         document.getElementById("youtube").style.zIndex = 0;
                         if (page > 1 && page < 68) {
-                            document.getElementById("current-pages").innerHTML = page.toString() + '-' + (page + 1).toString();
-                        } else {
+                            document.getElementById("current-pages").innerHTML = page.toString();
+                        }
+                        if (page === 1 || page === 68) {
                             document.getElementById("current-pages").innerHTML = page;
                         }
 
@@ -571,7 +579,8 @@
                 "css/magazine.css",
                 "css/sidebar.css",
                 "css/youtube_card.css",
-                "css/modal.css"
+                "css/modal.css",
+                "css/preloader.css",
 
 
             ],
