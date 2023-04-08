@@ -158,9 +158,6 @@
         });
 
         var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
-
-
-
         if (window.innerWidth < 1440) {
             if (mobile) {
                 $('.navbar-items').css('display', 'block');
@@ -177,7 +174,6 @@
         function loadApp() {
             $("#canvas").fadeIn(1000);
             $('#youtube').show();
-
             var flipbook = $(".magazine");
 
             // Check if the CSS was already loaded
@@ -263,17 +259,14 @@
                     turned: function(event, page, view) {
                         //$(".instacard").hide();
                         document.getElementById("youtube").style.zIndex = 0;
-                        CheckPrevousButtoClicked();
 
                         if (page > 1 && page < 68) {
 
-                            CheckPrevousButtoClicked(page);
 
-                            document.getElementById("current-pages").innerHTML = (page - 1).toString() + '-' + (page).toString();
 
-                            //document.getElementById("current-pages").innerHTML = (page).toString() + '-' + (page + 1).toString();
+                            document.getElementById("current-pages").innerHTML = (page).toString() + '-' + (page + 1).toString();
 
-                            //document.getElementById("current-pages").innerHTML = page.toString();
+                            // document.getElementById("current-pages").innerHTML = page.toString();
 
 
 
