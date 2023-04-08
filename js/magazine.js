@@ -314,6 +314,7 @@ function decodeParams(data) {
     for (var i = 0; i < parts.length; i++) {
         d = parts[i].split('=');
         obj[decodeURIComponent(d[0])] = decodeURIComponent(d[1]);
+        console.log(decodeURIComponent(d[1]));
     }
 
     return obj;

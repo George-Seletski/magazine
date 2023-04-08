@@ -384,6 +384,20 @@
 
                         Hash.go("page/" + page).update();
 
+                        if (page > 1 && page < 68) {
+
+
+
+                            document.getElementById("current-pages").innerHTML = (page).toString() + '-' + (page + 1).toString();
+
+                            // document.getElementById("current-pages").innerHTML = page.toString();
+
+
+
+                        }
+                        if (page === 1 || page === 68) {
+                            document.getElementById("current-pages").innerHTML = page;
+                        }
 
                         // Show and hide navigation buttons
 
@@ -401,22 +415,6 @@
                     turned: function(event, page, view) {
                         //$(".instacard").hide();
                         document.getElementById("youtube").style.zIndex = 0;
-
-                        if (page > 1 && page < 68) {
-
-
-
-                            document.getElementById("current-pages").innerHTML = (page).toString() + '-' + (page + 1).toString();
-
-                            // document.getElementById("current-pages").innerHTML = page.toString();
-
-
-
-                        }
-                        if (page === 1 || page === 68) {
-                            document.getElementById("current-pages").innerHTML = page;
-                        }
-
 
                         disableControls(page);
 
@@ -516,9 +514,8 @@
                             $(".magazine").addClass("animated").removeClass("zoom-in");
                             resizeViewport();
                             if (!mobile) {
-                                if (page == 1) {
-                                    $(".youtube").show();
-                                }
+                                $(".youtube").show();
+
 
                             }
                             document.getElementById("youtube").style.zIndex = 0;
