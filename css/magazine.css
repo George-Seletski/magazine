@@ -490,6 +490,15 @@ header {
 
 .thumbnails img {
     float: left;
+    width: 200px;
+    height: 250px;
+}
+
+@media screen and (max-width: 768px) {
+    .thumbnails img {
+        width: 150px;
+        height: 200px;
+    }
 }
 
 .exit-message {

@@ -4,7 +4,6 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    bottom: 0;
     transform: translate(-50%, -50%);
     z-index: 99999;
 }
@@ -102,4 +101,36 @@
     letter-spacing: 12px;
     color: #fff;
     left: 15%;
+}
+
+
+/* Media queries for smaller screens */
+
+@media only screen and (max-width: 600px) {
+    .wrapperanimate {
+        width: 150px;
+        height: 45px;
+    }
+    .circle,
+    .shadow-circle {
+        width: 15px;
+        height: 15px;
+        top: 40%;
+    }
+    .circle:nth-child(2) {
+        left: 40%;
+    }
+    .circle:nth-child(3) {
+        right: 40%;
+    }
+    .shadow-circle:nth-child(4) {
+        left: 40%;
+    }
+    .shadow-circle:nth-child(5) {
+        right: 40%;
+    }
+    .wrapperanimate span {
+        font-size: 16px;
+        letter-spacing: 8px;
+    }
 }
