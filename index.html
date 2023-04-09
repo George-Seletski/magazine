@@ -9,9 +9,6 @@
 
     <script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
     <script type="text/javascript" src="js/hash.js"></script>
-    <script type="text/javascript" src="js/instafeed.min.js"></script>
-
-
 
 </head>
 
@@ -308,7 +305,6 @@
                     </blockquote>
                 </div>
 
-
             </div>
         </div>
     </div>
@@ -519,7 +515,6 @@
                 flipbook: $(".magazine"),
 
                 max: function() {
-                    //$(".youtube").hide();
                     return largeMagazineWidth() / $(".magazine").width();
                 },
 
@@ -626,7 +621,7 @@
             Hash.on("^page\/([0-9]*)$", {
                 yep: function(path, parts) {
                     var page = parts[1];
-                    console.log(parts[1], parts, path);
+
                     if (page !== undefined) {
                         if ($(".magazine").turn("is"))
                             $(".magazine").turn("page", page);
@@ -654,7 +649,6 @@
 
                 if (event.target && (page = /page-([0-9]+)/.exec($(event.target).attr("class")))) {
                     $(".magazine").turn("page", page[1]);
-                    //console.log('thumbnails clicked', page[1]);
                 }
             });
 
@@ -736,9 +730,6 @@
                 });
 
             resizeViewport();
-            /*if ($(window).width() < 600) {
-                //$(".instacard").addClass("odd");
-            }*/
 
             $(".magazine").addClass("animated");
         }
@@ -780,7 +771,6 @@
                 "js/magazine.js",
                 "js/sidebar.js",
                 "js/modal.js",
-                "js/instagram.js",
                 "js/generating_contents.js",
                 "//www.instagram.com/embed.js",
 
