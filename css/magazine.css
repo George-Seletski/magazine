@@ -200,6 +200,7 @@ header {
     width: 1222px;
     height: 800px;
     margin: auto auto 1em;
+    overflow-x: visible;
 }
 
 .magazine-viewport .magazine {

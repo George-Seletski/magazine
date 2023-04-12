@@ -522,7 +522,8 @@
                 flipbook: $(".magazine"),
 
                 max: function() {
-                    return largeMagazineWidth() / $(".magazine").width();
+                    return largeMagazineWidth(window.innerWidth) / $(".magazine").width();
+                    //console.log('**', largeMagazineWidth(), largeMagazineWidth() / $(".magazine").width());
                 },
 
                 when: {
@@ -547,6 +548,7 @@
                             .removeClass("zoom-icon-in")
                             .addClass("zoom-icon-out");
                         $(".instacard").css('display', 'none');
+
 
                         document.getElementById("youtube").style.zIndex = 0;
 
@@ -576,10 +578,12 @@
 
                         setTimeout(function() {
                             $(".magazine").addClass("animated").removeClass("zoom-in");
+
                             resizeViewport();
+
+                            //get current page 
                             var currentLocation = window.location;
                             var currentPage = currentLocation.href.slice(-2);
-                            console.log(currentPage);
                             if (!mobile) {
 
                                 $(".youtube").show();

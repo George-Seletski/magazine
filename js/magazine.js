@@ -263,7 +263,7 @@ function resizeViewport() {
     var magazineOffset = $('.magazine'),
         boundH = height - magazineOffset.top - $('.magazine').height(),
         marginTop = (boundH - $('.thumbnails > div').height()) / 2;
-    console.log(marginTop);
+    //console.log(marginTop);
 
 
     if (marginTop < 0) {
@@ -299,9 +299,13 @@ function getViewNumber(book, page) {
 
 // Width of the flipbook when zoomed in
 
-function largeMagazineWidth() {
+function largeMagazineWidth(width) {
+    if (width < 1024) {
+        return 1024;
+    } else {
+        return width;
+    }
 
-    return 2114;
 
 }
 
@@ -315,7 +319,7 @@ function decodeParams(data) {
     for (var i = 0; i < parts.length; i++) {
         d = parts[i].split('=');
         obj[decodeURIComponent(d[0])] = decodeURIComponent(d[1]);
-        console.log(decodeURIComponent(d[1]));
+        //console.log(decodeURIComponent(d[1]));
     }
 
     return obj;
@@ -336,7 +340,7 @@ function calculateBound(d) {
             bound.width = Math.round(d.boundHeight * rel) + 100;
 
             bound.height = d.boundHeight;
-            //console.log('a)', bound.width, bound.height)
+            console.log('a)', bound.width, bound.height)
 
         } else {
 

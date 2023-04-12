@@ -39,7 +39,9 @@
         bottom: 35em;
     }
     .instagram-media.instagram-media-rendered {
-        min-width: 150px !important;
+        min-width: 50px !important;
+        width: 310px !important;
+        height: 470px !important;
     }
 }
 
