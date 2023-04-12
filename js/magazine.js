@@ -340,13 +340,12 @@ function calculateBound(d) {
             bound.width = Math.round(d.boundHeight * rel) + 100;
 
             bound.height = d.boundHeight;
-            console.log('a)', bound.width, bound.height)
+
 
         } else {
 
             bound.width = d.boundWidth + 250;
             bound.height = Math.round(d.boundWidth / rel) + 200;
-            console.log('b)', bound.width, bound.height)
 
 
         }
