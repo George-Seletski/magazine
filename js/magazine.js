@@ -263,6 +263,7 @@ function resizeViewport() {
     var magazineOffset = $('.magazine'),
         boundH = height - magazineOffset.top - $('.magazine').height(),
         marginTop = (boundH - $('.thumbnails > div').height()) / 2;
+    console.log(marginTop);
 
 
     if (marginTop < 0) {

@@ -35,10 +35,12 @@ header {
     margin: auto;
     width: 100%;
     padding-top: 5px;
+    list-style: none;
 }
 
 .navbar-items {
-    display: flex;
+    display: none;
+    text-decoration: none;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -58,10 +60,11 @@ header {
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 13px;
+    padding: 5px;
 }
 
 .navbar-items a:hover {
-    background-color: #d89da4f1;
+    background-color: #d39aa1f1;
 }
 
 
@@ -115,13 +118,15 @@ header {
     margin-right: 5px;
     width: 5px;
     margin-left: 5px;
+    margin-top: 5.5px;
 }
 
-.footer-icon-jump-lats,
+.footer-icon-jump-last,
 .footer-icon-jump-first {
     margin-right: 5px;
     width: 10px;
     margin-left: 5px;
+    margin-top: 5px;
 }
 
 
@@ -599,19 +604,19 @@ header {
 
 .footer-items a:hover {
     font-weight: bold;
-    background-color: #d89da4f1;
+    background-color: #d39aa1f1;
 }
 
 #footer-icon-next-page:hover {
     font-weight: bold;
-    background-color: #d89da4f1;
+    background-color: #d39aa1f1;
     cursor: pointer;
     border-radius: 50%;
 }
 
 #footer-icon-previous-page:hover {
     font-weight: bold;
-    background-color: #d89da4f1;
+    background-color: #d39aa1f1;
     cursor: pointer;
     border-radius: 50%;
 }
