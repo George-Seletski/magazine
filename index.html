@@ -29,7 +29,7 @@
 
             <div class="navbar">
 
-                <ul class="navbar-items">
+                <ul class="navbar-items" style="display: none;">
                     <li>
                         <a onclick="openSideBar()" class="nav-link" href="#menu-toggle" id="menu-toggle"><img id="contents-icon" class="icon" loading="lazy">Contents</a>
                     </li>
@@ -349,6 +349,7 @@
             // Hide the preloader
             $(".preloader").fadeOut(1000, function() {
                 $('.navbar-items').fadeIn(500);
+
                 $('#overview-icon').attr('src', './pics/gallery-grid-view-icon.svg');
                 $('#download-icon').attr('src', './pics/move-down-icon.svg');
                 $('#contents-icon').attr('src', './pics/list-round-bullet-outline-icon.svg');
@@ -363,6 +364,8 @@
                 }
                 $(".footer-items").fadeIn(500);
                 $(".footer-items").css('display', 'flex');
+
+
             });
         });
 
