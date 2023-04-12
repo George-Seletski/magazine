@@ -544,9 +544,6 @@
                         $(".thumbnails").hide();
                         $(".made").hide();
                         $(".magazine").removeClass("animated").addClass("zoom-in");
-                        $(".zoom-icon")
-                            .removeClass("zoom-icon-in")
-                            .addClass("zoom-icon-out");
                         $(".instacard").css('display', 'none');
 
 
@@ -568,13 +565,11 @@
                     },
 
                     zoomOut: function() {
-
+                        $(".instacard").css('display', 'none');
                         $(".exit-message").hide();
                         $(".thumbnails").fadeIn();
                         $(".made").fadeIn();
-                        $(".zoom-icon")
-                            .removeClass("zoom-icon-out")
-                            .addClass("zoom-icon-in");
+
 
                         setTimeout(function() {
                             $(".magazine").addClass("animated").removeClass("zoom-in");
@@ -584,6 +579,7 @@
                             //get current page 
                             var currentLocation = window.location;
                             var currentPage = currentLocation.href.slice(-2);
+
                             if (!mobile) {
 
                                 $(".youtube").show();
@@ -753,30 +749,6 @@
 
             $(".magazine").addClass("animated");
         }
-
-        // Zoom icon
-
-        $(".zoom-icon")
-            .bind("mouseover", function() {
-                if ($(this).hasClass("zoom-icon-in"))
-                    $(this).addClass("zoom-icon-in-hover");
-
-                if ($(this).hasClass("zoom-icon-out"))
-                    $(this).addClass("zoom-icon-out-hover");
-            })
-            .bind("mouseout", function() {
-                if ($(this).hasClass("zoom-icon-in"))
-                    $(this).removeClass("zoom-icon-in-hover");
-
-                if ($(this).hasClass("zoom-icon-out"))
-                    $(this).removeClass("zoom-icon-out-hover");
-            })
-            .bind("click", function() {
-                if ($(this).hasClass("zoom-icon-in"))
-                    $(".magazine-viewport").zoom("zoomIn");
-                else if ($(this).hasClass("zoom-icon-out"))
-                    $(".magazine-viewport").zoom("zoomOut");
-            });
 
         $("#canvas").hide();
 
