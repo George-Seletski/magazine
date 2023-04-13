@@ -2,6 +2,9 @@
 body {
     overflow: hidden;
     background-image: url(../images/background/pozadi2.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
@@ -213,20 +216,21 @@ header {
     }
 }*/
 
-@media screen and (max-width: 768px) {
+
+/*@media screen and (max-width: 768px) {
     .sidebar-items span {
         letter-spacing: 0px;
     }
     .magazine-viewport .magazine {
-        /*width: 768px !important;
+        width: 768px !important;
         height: 580px !important;
         left: -3.5px !important;
-        top: -295.5px !important;*/
+        top: -295.5px !important;
     }
     .magazine-viewport .container {
         left: 0 !important;
     }
-}
+}*/
 
 .magazine-viewport .page {
     width: 611px;
