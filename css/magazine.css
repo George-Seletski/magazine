@@ -182,12 +182,6 @@ header {
     letter-spacing: 2px;
 }
 
-@media screen and (max-width: 768px) {
-    .sidebar-items span {
-        letter-spacing: 0px;
-    }
-}
-
 .closebtn:hover {
     color: rgb(206, 200, 199);
     text-decoration: none !important;
@@ -218,6 +212,21 @@ header {
         height: 800px;
     }
 }*/
+
+@media screen and (max-width: 768px) {
+    .sidebar-items span {
+        letter-spacing: 0px;
+    }
+    .magazine-viewport .magazine {
+        /*width: 768px !important;
+        height: 580px !important;
+        left: -3.5px !important;
+        top: -295.5px !important;*/
+    }
+    .magazine-viewport .container {
+        left: 0 !important;
+    }
+}
 
 .magazine-viewport .page {
     width: 611px;

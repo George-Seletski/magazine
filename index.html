@@ -352,6 +352,10 @@
             //the preloader
             $(".preloader").fadeOut(1000, function() {
                 $('.navbar-items').fadeIn(500);
+                $(".navbar-items").css('display', 'flex');
+
+                var href_val = '#page/' + 68;
+                $("#footer-link-last").attr("href", href_val);
 
                 // adding icons while loading
                 $('#overview-icon').attr('src', './pics/gallery-grid-view-icon.svg');
@@ -367,6 +371,7 @@
                 } else {
                     $('.navbar-items').css('display', 'flex');
                 }
+                $('#footer').fadeIn(500);
                 $(".footer-items").fadeIn(500);
                 $(".footer-items").css('display', 'flex');
 
@@ -386,7 +391,7 @@
 
 
         function loadApp() {
-            $("#canvas").fadeIn(1000);
+            $("#canvas").fadeIn(100);
             $('.instacard').hide();
             $('.youtube').show();
 
@@ -452,7 +457,7 @@
                         $("#amount-of-pages").text(pages.toString());
 
                         //set href to last page
-                        var href_val = '#page/' + pages.toString();
+                        var href_val = '#page/' + 68;
                         $("#footer-link-last").attr("href", href_val);
 
                         // Update the current URI

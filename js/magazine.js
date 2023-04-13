@@ -301,7 +301,7 @@ function getViewNumber(book, page) {
 
 function largeMagazineWidth(width) {
     if (width < 1024) {
-        return 1024;
+        return 1440;
     } else {
         return width;
     }

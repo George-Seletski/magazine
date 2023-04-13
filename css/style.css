@@ -46,6 +46,34 @@
     }
 }
 
+@media screen and (max-width: 425px) {
+    .instacard {
+        left: 3em;
+        bottom: 35em;
+        margin: -11px;
+    }
+    .instagram-media.instagram-media-rendered {
+        min-width: 50px !important;
+        width: 310px !important;
+        height: 470px !important;
+    }
+}
+
+
+/*@media screen and (width: 768px) {
+    .instacard {
+        left: 25em;
+        bottom: 35em;
+        margin: -11px;
+    }
+    .instagram-media.instagram-media-rendered {
+        min-width: 50px !important;
+        width: 265px !important;
+        height: 470px !important;
+    }
+}
+*/
+
 @media screen and (min-width: 1024px) {
     .instagram-media.instagram-media-rendered {
         min-width: 400px !important;
