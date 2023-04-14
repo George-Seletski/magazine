@@ -77,7 +77,7 @@ function loadPage(page, pageElement) {
 
     // Load the page
 
-    img.attr('src', 'pages/png/online_portfolio' + page + '.png');
+    img.attr('src', 'pages/png/611x800px_online_portfolio' + page + '.png');
 
 }
 
@@ -188,7 +188,7 @@ function loadSmallPage(page, pageElement) {
     img.unbind('load');
     // Loadnew page
 
-    img.attr('src', 'pages/png/online_portfolio' + page + '.png');
+    img.attr('src', 'pages/png/611x800px_online_portfolio' + page + '.png');
 }
 
 // http://code.google.com/p/chromium/issues/detail?id=128488
