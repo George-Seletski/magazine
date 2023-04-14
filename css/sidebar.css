@@ -139,3 +139,17 @@
         margin-left: 0;
     }
 }
+
+.closebtn-sidebar {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px !important;
+    font-weight: bold;
+    margin-left: 300px;
+}
+
+.closebtn-sidebar:hover {
+    color: rgb(206, 200, 199);
+    text-decoration: none !important;
+}

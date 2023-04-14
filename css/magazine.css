@@ -172,13 +172,15 @@ header {
     text-decoration: underline;
 }
 
-.sidebar-items .closebtn {
+.closebtn {
     position: absolute;
     top: 0;
+    margin-top: -50px;
     right: 15px;
-    font-size: 36px;
+    font-size: 36px !important;
     font-weight: bold;
     margin-left: 300px;
+    color: #666;
 }
 
 .sidebar-items span {
