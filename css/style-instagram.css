@@ -48,7 +48,7 @@
 
 @media screen and (max-width: 425px) {
     .instacard {
-        left: 3em;
+        left: 2em;
         bottom: 35em;
         margin: -11px;
     }
