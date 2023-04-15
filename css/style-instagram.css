@@ -77,8 +77,9 @@
 @media screen and (min-width: 1024px) {
     .instagram-media.instagram-media-rendered {
         min-width: 400px !important;
+        height: 600px !important;
     }
     .instacard {
-        bottom: 24em;
+        bottom: 30em;
     }
 }

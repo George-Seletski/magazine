@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');*/
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-ExtraLight.ttf);
+}
+
 body {
     overflow: hidden;
     background-image: url(../images/background/pozadi2.png);
@@ -414,6 +420,11 @@ header {
     height: 100px;*/
 }
 
+#thumbnails-items img {
+    width: 200px;
+    height: 250px;
+}
+
 .thumbnails ul {
     margin: 0;
     padding: 0;
@@ -485,6 +496,7 @@ header {
     -ms-box-shadow: 0 0 10px #666;
     -o-box-shadow: 0 0 10px #666;
     box-shadow: 0 0 10px #666;
+    cursor: pointer;
 }
 
 .thumbanils-touch .thumb-hover {
