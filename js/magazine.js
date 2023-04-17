@@ -39,6 +39,7 @@ function addPage(page, book) {
 
     // Add the page to the flipbook
     if (book.turn('addPage', element, page)) {
+        //console.log(element, '||', page);
 
         // Add the initial HTML
         // It will contain a loader indicator and a gradient
@@ -76,8 +77,13 @@ function loadPage(page, pageElement) {
     });
 
     // Load the page
+    if (mobile) {
+        img.attr('src', 'pages/mobile/png/611x800px_online_portfolio_' + page + '.png');
+    } else {
+        img.attr('src', 'pages/desktop/png/611x800px_online_portfolio' + page + '.png');
+    }
 
-    img.attr('src', 'pages/png/611x800px_online_portfolio' + page + '.png');
+
 
 }
 

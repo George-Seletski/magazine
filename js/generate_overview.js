@@ -35,8 +35,13 @@ function createImageElement(src, i) {
 window.onload = function() {
     const container = document.getElementById('thumbnails-items');
     let thumbnailsItemsList = [];
-    for (let i = 1; i < 116; i++) {
-        thumbnailsItemsList.push(`pages/png/611x800px_online_portfolio${i}.png`);
+    for (let i = 1; i < 133; i++) {
+        if (mobile) {
+            thumbnailsItemsList.push(`pages/mobile/png/611x800px_online_portfolio${i}.png`);
+        } else {
+            thumbnailsItemsList.push(`pages/desktop/png/611x800px_online_portfolio${i}.png`);
+        }
+
     }
     const unorderedList = document.createElement('ul');
     unorderedList.appendChild(createImageElement(thumbnailsItemsList[0], 0));
