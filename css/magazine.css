@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
-*/
+
 /*@font-face {
     font-family: 'Montserrat';
     src: url(../fonts/Montserrat-ExtraLight.ttf);
@@ -530,8 +530,8 @@ header {
 
 @media screen and (max-width: 768px) {
     .thumbnails img {
-        width: 150px;
-        height: 200px;
+        width: 152px !important;
+        height: 200px !important;
     }
 }
 
