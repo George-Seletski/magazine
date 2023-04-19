@@ -32,8 +32,6 @@ $(window).on('load', function() {
     $(".footer-items").css('display', 'flex');
     //the preloader
     /*$(".preloader").fadeOut(500, function() {
-       
-
 
     });*/
 });
