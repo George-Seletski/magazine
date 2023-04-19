@@ -1,35 +1,41 @@
 //Glovals
-var i = 0;
+var i = 1;
+
+// changing src to images
+
+
 
 $(window).on('load', function() {
+    $('#youtube').hide();
+    $('.navbar-items').fadeIn(500);
+    $(".navbar-items").css('display', 'flex');
+
+    var href_val = '#page/' + 132;
+    $("#footer-link-last").attr("href", href_val);
+
+    // adding icons while loading
+    $('#overview-icon').attr('src', './pics/gallery-grid-view-icon.svg');
+    $('#download-icon').attr('src', './pics/move-down-icon.svg');
+    $('#contents-icon').attr('src', './pics/list-round-bullet-outline-icon.svg');
+
+    if (window.innerWidth < 425) {
+        $('.navbar-items').css('display', 'block ');
+        $('.navbar-items').css('padding-top', '2px');
+        $('.modal-content').css('overflow-y', 'scroll !important');
+        $('.container').css('top', '44%');
+
+    } else {
+        $('.navbar-items').css('display', 'flex');
+    }
+    $('#footer').fadeIn(500);
+    $(".footer-items").fadeIn(500);
+    $(".footer-items").css('display', 'flex');
     //the preloader
-    $(".preloader").fadeOut(500, function() {
-        $('.navbar-items').fadeIn(500);
-        $(".navbar-items").css('display', 'flex');
-
-        var href_val = '#page/' + 132;
-        $("#footer-link-last").attr("href", href_val);
-
-        // adding icons while loading
-        $('#overview-icon').attr('src', './pics/gallery-grid-view-icon.svg');
-        $('#download-icon').attr('src', './pics/move-down-icon.svg');
-        $('#contents-icon').attr('src', './pics/list-round-bullet-outline-icon.svg');
-
-        if (window.innerWidth < 425) {
-            $('.navbar-items').css('display', 'block ');
-            $('.navbar-items').css('padding-top', '2px');
-            $('.modal-content').css('overflow-y', 'scroll !important');
-            $('.container').css('top', '44%');
-
-        } else {
-            $('.navbar-items').css('display', 'flex');
-        }
-        $('#footer').fadeIn(500);
-        $(".footer-items").fadeIn(500);
-        $(".footer-items").css('display', 'flex');
+    /*$(".preloader").fadeOut(500, function() {
+       
 
 
-    });
+    });*/
 });
 
 
@@ -93,7 +99,7 @@ function loadApp() {
 
         when: {
             turning: function(event, page, view) {
-                i += 1;
+
                 $(".instacard").css('display', 'none');
                 $(".youtube").hide();
                 document.getElementById("youtube").style.zIndex = 0;
@@ -120,8 +126,11 @@ function loadApp() {
 
                 } else {
                     if (page > 1 && page < 264) {
+                        //document.getElementById("current-pages").innerHTML = i.toString();
+                        console.log(i);
                         if (page % 2 === 0) {
-                            document.getElementById("current-pages").innerHTML = (page - 1).toString();
+                            document.getElementById("current-pages").innerHTML = i.toString();
+                            //document.getElementById("current-pages").innerHTML = (page - 1).toString();
                         } else {
                             document.getElementById("current-pages").innerHTML = ((page - i)).toString();
                         }
@@ -384,15 +393,18 @@ function loadApp() {
         })
         .click(function() {
             $(".magazine").turn("next");
+            i += 1;
         });
 
     //footer button
     $("#footer-icon-next-page").click(function() {
         $(".magazine").turn("next");
+        i += 1;
     });
     // Events for the previus button
     $("#footer-icon-previous-page").click(function() {
         $(".magazine").turn("previous");
+        //i -= 1;
     });
     $(".previous-button")
         .bind($.mouseEvents.over, function() {
@@ -409,6 +421,7 @@ function loadApp() {
         })
         .click(function() {
             $(".magazine").turn("previous");
+            //i -= 1;
         });
 
     resizeViewport();
@@ -435,7 +448,7 @@ yepnope({
         "css/sidebar.css",
         "css/youtube_card.css",
         "css/modal.css",
-        "css/preloader.css",
+        //"css/preloader.css",
         "css/style-instagram.css",
     ],
     complete: loadApp,

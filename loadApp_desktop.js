@@ -40,7 +40,7 @@ if (window.innerWidth < 1440) {
 }
 
 function loadApp() {
-    $("#canvas").fadeIn(100);
+    $("#canvas").fadeIn(500);
     $('.instacard').hide();
     $('.youtube').show();
 
