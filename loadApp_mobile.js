@@ -129,8 +129,8 @@ function loadApp() {
                         //document.getElementById("current-pages").innerHTML = i.toString();
                         console.log(i);
                         if (page % 2 === 0) {
-                            document.getElementById("current-pages").innerHTML = i.toString();
-                            //document.getElementById("current-pages").innerHTML = (page - 1).toString();
+                            //document.getElementById("current-pages").innerHTML = i.toString();
+                            document.getElementById("current-pages").innerHTML = (page - 1).toString();
                         } else {
                             document.getElementById("current-pages").innerHTML = ((page - i)).toString();
                         }

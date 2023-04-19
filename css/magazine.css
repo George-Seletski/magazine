@@ -96,6 +96,10 @@
         cursor: pointer;
     }
     
+    .previous-button-hover {
+        cursor: pointer;
+    }
+    
     .modal-backdrop {
         display: none;
     }
