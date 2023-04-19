@@ -1,10 +1,13 @@
+//Glovals
+var i = 0;
+
 $(window).on('load', function() {
     //the preloader
-    $(".preloader").fadeOut(1000, function() {
+    $(".preloader").fadeOut(500, function() {
         $('.navbar-items').fadeIn(500);
         $(".navbar-items").css('display', 'flex');
 
-        var href_val = '#page/' + 263;
+        var href_val = '#page/' + 132;
         $("#footer-link-last").attr("href", href_val);
 
         // adding icons while loading
@@ -84,12 +87,13 @@ function loadApp() {
 
         // The number of pages
 
-        pages: 263,
+        pages: 264,
 
         // Events
 
         when: {
             turning: function(event, page, view) {
+                i += 1;
                 $(".instacard").css('display', 'none');
                 $(".youtube").hide();
                 document.getElementById("youtube").style.zIndex = 0;
@@ -99,7 +103,7 @@ function loadApp() {
                     pages = book.turn("pages");
 
                 //add amount of pages in footer    
-                $("#amount-of-pages").text(((pages + 1) / 2).toString());
+                $("#amount-of-pages").text(pages.toString());
 
                 //set href to last page
                 var href_val = '#page/' + pages;
@@ -108,16 +112,19 @@ function loadApp() {
                 // Update the current URI
                 Hash.go("page/" + page).update();
 
-                if (page === 1 || page === 263) {
+                if (page === 1 || page === 264) {
                     document.getElementById("current-pages").innerHTML = page;
-                    if (page === 263) {
+                    if (page === 264) {
                         $('.instagram').show();
                     }
 
                 } else {
-                    if (page > 1 && page < 263) {
-                        document.getElementById("current-pages").innerHTML = ((page / 2) + 1).toString();
-
+                    if (page > 1 && page < 264) {
+                        if (page % 2 === 0) {
+                            document.getElementById("current-pages").innerHTML = (page - 1).toString();
+                        } else {
+                            document.getElementById("current-pages").innerHTML = ((page - i)).toString();
+                        }
                     }
                 }
                 // Show and hide navigation buttons
@@ -151,7 +158,7 @@ function loadApp() {
 
                 } else {
                     if (page > 1) {
-                        if (page === 263) {
+                        if (page === 264) {
                             $('.instacard').show();
                         } else {
 
@@ -243,7 +250,7 @@ function loadApp() {
 
                         $(".youtube").show();
                     } else {
-                        if (currentPage != 263) {
+                        if (currentPage != 264) {
                             $(".instacard").css('display', 'none');
                         }
                     }
