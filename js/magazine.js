@@ -50,6 +50,29 @@ function addPage(page, book, path) {
     console.log(path)
 }
 
+function addPageMobile(page, book, path) {
+
+    var id, pages = book.turn('pages');
+
+    // Create a new element for this page
+    var element = $('<div />', {});
+
+    // Add the page to the flipbook
+    if (book.turn('addPage', element, page)) {
+
+        // Add the initial HTML
+        // It will contain a loader indicator and a gradient
+        element.html('<div class="gradient"></div><div class="loader"></div>');
+
+        // Load the page
+
+        //loadLargePage(page, element);
+
+        loadPageMoile(page, element, path);
+
+    }
+    console.log(path);
+}
 
 
 
@@ -57,7 +80,7 @@ function addPage(page, book, path) {
 function loadPage(page, pageElement, path) {
 
     // Create an image elementpng
-
+    var Path = path;
     var img = $('<img />');
 
     img.mousedown(function(e) {
@@ -81,7 +104,7 @@ function loadPage(page, pageElement, path) {
     // Load the page
 
     //img.attr('src', 'pages/desktop/png/611x800px_online_portfolio' + page + '.png');
-    img.attr('src', path + page + '.png');
+    img.attr('src', Path + page + '.png');
     //img.attr('loading', 'lazy');
 
 }
@@ -103,8 +126,6 @@ function zoomTo(event) {
     }, 1);
 
 }
-
-
 
 // Process click on a region
 
@@ -160,6 +181,54 @@ function processRegion(region, regionType) {
     }
 
 }
+
+function loadPageMoile(page, pageElement, path) {
+
+    // Create an image elementpng
+    var Path = path;
+    var img = $('<img />');
+
+    img.mousedown(function(e) {
+        e.preventDefault();
+    });
+
+    img.load(function() {
+
+        // Set the size
+        img.css({ width: '400px', height: '511px' });
+
+        // Add the image to the page after loaded
+
+        $(this).appendTo(pageElement);
+
+        // Remove the loader indicator
+
+        pageElement.find('.loader').remove();
+    });
+
+    // Load the page
+
+    //img.attr('src', 'pages/desktop/png/611x800px_online_portfolio' + page + '.png');
+    img.attr('data-src', Path + page + '.png');
+    img.attr('loading', 'lazy');
+    console.log(img.width, img.height, Path);
+
+}
+
+function loadSmallPageMobile(page, pageElement, path) {
+
+    var img = pageElement.find('img');
+
+    img.css({ width: '400px', height: '511px' });
+
+    img.unbind('load');
+    // Loadnew page
+
+    //img.attr('src', 'pages/desktop/png/611x800px_online_portfolio' + page + '.png');
+    img.attr('src', path + page + '.png');
+
+}
+
 
 // Load large page
 

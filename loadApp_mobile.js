@@ -1,6 +1,6 @@
 //Glovals
-var i = 1;
-
+var i = 0;
+var current_page = 0;
 // changing src to images
 
 
@@ -129,12 +129,13 @@ function loadApp() {
                 } else {
                     if (page > 1 && page < 264) {
                         //document.getElementById("current-pages").innerHTML = i.toString();
-                        console.log(i);
+
                         if (page % 2 === 0) {
+                            console.log(page - i);
                             //document.getElementById("current-pages").innerHTML = i.toString();
-                            document.getElementById("current-pages").innerHTML = (page).toString();
+                            document.getElementById("current-pages").innerHTML = (page - i).toString();
                         } else {
-                            document.getElementById("current-pages").innerHTML = ((page - i)).toString();
+                            document.getElementById("current-pages").innerHTML = ((page + 1) / 2).toString();
                         }
                     }
                 }
@@ -211,7 +212,7 @@ function loadApp() {
             },
 
             resize: function(event, scale, page, pageElement) {
-                if (scale == 1) loadSmallPage(page, pageElement), 'pages/mobile/png/611x800px_online_portfolio_';
+                if (scale == 1) loadSmallPage(page, pageElement, 'pages/mobile/png/611x800px_online_portfolio_');
                 //else loadLargePage(page, pageElement);
             },
 
@@ -395,7 +396,7 @@ function loadApp() {
         })
         .click(function() {
             $(".magazine").turn("next");
-            i += 1;
+
         });
 
     //footer button
@@ -406,7 +407,10 @@ function loadApp() {
     // Events for the previus button
     $("#footer-icon-previous-page").click(function() {
         $(".magazine").turn("previous");
-        //i -= 1;
+        if (i > 0) {
+            i -= 1;
+        }
+
     });
     $(".previous-button")
         .bind($.mouseEvents.over, function() {
