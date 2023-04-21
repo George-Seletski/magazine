@@ -1,12 +1,13 @@
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
-    /*@font-face {
-    font-family: 'Montserrat';
-    src: url(../fonts/Montserrat-ExtraLight.ttf);
-}*/
+    /*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');*/
+    
+    @font-face {
+        font-family: 'Montserrat';
+        src: url(../fonts/Montserrat-ExtraLight.ttf);
+    }
     
     body {
         overflow: hidden;
-        background-image: url(../images/background/pozadi2.png);
+        background-image: url(../images/background/pozadi2.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: 100% 100%;
