@@ -186,7 +186,7 @@ function loadApp() {
 
             missing: function(event, pages) {
                 // Add pages that aren't in the magazine
-                for (var i = 0; i < pages.length; i++) addPage(pages[i], $(this), 'pages/mobile/png/611x800px_online_portfolio_');
+                for (var i = 0; i < pages.length; i++) addPage(pages[i], $(this), 'pages/desktop/png/611x800px_online_portfolio');
             },
         },
     });
