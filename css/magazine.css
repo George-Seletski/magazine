@@ -1,9 +1,8 @@
-    /*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');*/
-    
-    @font-face {
-        font-family: 'Montserrat';
-        src: url(../fonts/Montserrat-ExtraLight.ttf);
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+    /*@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-ExtraLight.ttf);
+}*/
     
     body {
         overflow: hidden;
@@ -32,7 +31,7 @@
         padding-left: 5px;
         padding-right: 5px;
         padding-bottom: 5px;
-        background-color: #dda4ab;
+        background-color: #dfab7c;
     }
     
     .navbar {
@@ -70,7 +69,7 @@
     }
     
     .navbar-items a:hover {
-        background-color: #d39aa1f1;
+        background-color: #d1935c;
     }
     /*NAVBAR LINE*/
     
@@ -110,6 +109,10 @@
         width: 10px;
         margin-right: 10px;
     }
+    
+    #share-icon {
+        width: 12px;
+    }
     /*.preload {
     opacity: 0;
     visibility: hidden;
@@ -145,7 +148,7 @@
     }
     
     .sidebar-items {
-        background-color: #dda4ab;
+        background-color: #dfab7c;
         list-style: none;
         margin: 0;
         padding: 20px;
@@ -172,11 +175,11 @@
     .closebtn {
         position: absolute;
         top: 0;
-        margin-top: -50px;
+        margin-top: 50px;
         right: 15px;
         font-size: 36px !important;
         font-weight: bold;
-        margin-left: 300px;
+        margin-right: 100px;
         color: #666;
     }
     
@@ -185,7 +188,7 @@
     }
     
     .closebtn:hover {
-        color: rgb(206, 200, 199);
+        color: rgb(218, 207, 198);
         text-decoration: none !important;
     }
     
@@ -586,7 +589,7 @@
         position: fixed;
         bottom: 0;
         width: 100%;
-        background-color: #dda4ab;
+        background-color: #dfab7c;
         color: rgb(0, 0, 0);
         text-align: center;
         height: 35px;
@@ -618,19 +621,19 @@
     
     .footer-items a:hover {
         font-weight: bold;
-        background-color: #d39aa1f1;
+        background-color: #df9c61;
     }
     
     #footer-icon-next-page:hover {
         font-weight: bold;
-        background-color: #d39aa1f1;
+        background-color: #d4955d;
         cursor: pointer;
         border-radius: 50%;
     }
     
     #footer-icon-previous-page:hover {
         font-weight: bold;
-        background-color: #d39aa1f1;
+        background-color: #cf915a;
         cursor: pointer;
         border-radius: 50%;
     }
@@ -638,14 +641,14 @@
     
     .current-page-box {
         width: fit-content;
-        background-color: #ce949bf1;
+        background-color: #d19a6a;
         width: 100px;
         border-radius: 5px;
         padding: 3px;
     }
     
     .current-page-box:hover {
-        background-color: #b19494;
+        background-color: #d1935c;
         cursor: pointer;
         font-weight: bold;
     }
