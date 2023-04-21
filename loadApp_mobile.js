@@ -6,6 +6,10 @@ var i = 1;
 
 
 $(window).on('load', function() {
+
+    $('.next-button').hide();
+    $('.previous-button').hide();
+
     $('#youtube').hide();
     $('.navbar-items').fadeIn(500);
     $(".navbar-items").css('display', 'flex');
@@ -128,7 +132,7 @@ function loadApp() {
                         console.log(i);
                         if (page % 2 === 0) {
                             //document.getElementById("current-pages").innerHTML = i.toString();
-                            document.getElementById("current-pages").innerHTML = (page - 1).toString();
+                            document.getElementById("current-pages").innerHTML = (page).toString();
                         } else {
                             document.getElementById("current-pages").innerHTML = ((page - i)).toString();
                         }
@@ -181,7 +185,7 @@ function loadApp() {
 
             missing: function(event, pages) {
                 // Add pages that aren't in the magazine
-                for (var i = 0; i < pages.length; i++) addPage(pages[i], $(this));
+                for (var i = 0; i < pages.length; i++) addPage(pages[i], $(this), 'pages/mobile/png/611x800px_online_portfolio_');
             },
         },
     });
@@ -207,7 +211,7 @@ function loadApp() {
             },
 
             resize: function(event, scale, page, pageElement) {
-                if (scale == 1) loadSmallPage(page, pageElement);
+                if (scale == 1) loadSmallPage(page, pageElement), 'pages/mobile/png/611x800px_online_portfolio_';
                 //else loadLargePage(page, pageElement);
             },
 

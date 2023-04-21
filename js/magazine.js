@@ -26,7 +26,7 @@ function closeSideBar() {
 
 }
 
-function addPage(page, book) {
+function addPage(page, book, path) {
 
     var id, pages = book.turn('pages');
 
@@ -44,17 +44,17 @@ function addPage(page, book) {
 
         //loadLargePage(page, element);
 
-        loadPage(page, element);
+        loadPage(page, element, path);
 
     }
-
+    console.log(path)
 }
 
 
 
 
 
-function loadPage(page, pageElement) {
+function loadPage(page, pageElement, path) {
 
     // Create an image elementpng
 
@@ -80,7 +80,9 @@ function loadPage(page, pageElement) {
 
     // Load the page
 
-    img.attr('src', 'pages/desktop/png/611x800px_online_portfolio' + page + '.png');
+    //img.attr('src', 'pages/desktop/png/611x800px_online_portfolio' + page + '.png');
+    img.attr('src', path + page + '.png');
+    //img.attr('loading', 'lazy');
 
 }
 
@@ -182,7 +184,7 @@ function processRegion(region, regionType) {
 
 // Load small page
 
-function loadSmallPage(page, pageElement) {
+function loadSmallPage(page, pageElement, path) {
 
     var img = pageElement.find('img');
 
@@ -191,7 +193,8 @@ function loadSmallPage(page, pageElement) {
     img.unbind('load');
     // Loadnew page
 
-    img.attr('src', 'pages/desktop/png/611x800px_online_portfolio' + page + '.png');
+    //img.attr('src', 'pages/desktop/png/611x800px_online_portfolio' + page + '.png');
+    img.attr('src', path + page + '.png');
 }
 
 // http://code.google.com/p/chromium/issues/detail?id=128488

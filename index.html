@@ -358,8 +358,8 @@
                 </div>
 
                 <div class="magazine">
-                    <div ignore="1" class="next-button"></div>
-                    <div ignore="1" class="previous-button"></div>
+                    <!--<div ignore="1" class="next-button"></div>
+                    <div ignore="1" class="previous-button"></div>-->
                 </div>
 
 
@@ -483,10 +483,11 @@
         var script = document.createElement('script');
         script.type = 'text/javascript';
 
-        if (mobile) {
+        if (mobile && window.innerWidth < 1025) {
             script.src = 'loadApp_mobile.js';
             console.log('mobile:', mobile, script.src);
         } else {
+
             script.src = 'loadApp_desktop.js';
             console.log('mobile:', mobile, script.src);
         }

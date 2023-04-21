@@ -172,7 +172,7 @@
 
              missing: function(event, pages) {
                  // Add pages that aren't in the magazine
-                 for (var i = 0; i < pages.length; i++) addPage(pages[i], $(this));
+                 for (var i = 0; i < pages.length; i++) addPage(pages[i], $(this), 'pages/desktop/png/611x800px_online_portfolio');
              },
          },
      });
@@ -198,7 +198,7 @@
              },
 
              resize: function(event, scale, page, pageElement) {
-                 if (scale == 1) loadSmallPage(page, pageElement);
+                 if (scale == 1) loadSmallPage(page, pageElement, 'pages/desktop/png/611x800px_online_portfolio');
                  //else loadLargePage(page, pageElement);
              },
 
