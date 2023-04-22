@@ -64,7 +64,7 @@ function addPageMobile(page, book, path) {
         // Add the initial HTML
         // It will contain a loader indicator and a gradient
         if (page % 2 != 0) {
-            element.html('<div class="gradient"></div><div class="loader"></div>');
+            //element.html('<div class="gradient"></div><div class="loader"></div>');
 
             // Load the page
 
