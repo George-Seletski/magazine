@@ -35,11 +35,11 @@ function createImageElement(src, i) {
 window.onload = function() {
     const container = document.getElementById('thumbnails-items');
     let thumbnailsItemsList = [];
-    for (let i = 1; i < 133; i++) {
+    for (let i = 1; i < 125; i++) {
         if (mobile) {
-            thumbnailsItemsList.push(`pages/mobile/png/611x800px_online_portfolio${i}.png`);
+            thumbnailsItemsList.push(`pages/mobile/png-thumbnails/611x800px_online_portfolio${i}.jpg`);
         } else {
-            thumbnailsItemsList.push(`pages/desktop/png/611x800px_online_portfolio${i}.png`);
+            thumbnailsItemsList.push(`pages/desktop/png-thumbnails/611x800px_online_portfolio${i}.jpg`);
         }
 
     }

@@ -1,4 +1,5 @@
 function openSideBar() {
+    $('.sidebar').addClass('show');
     if (window.innerWidth < 768) {
         document.getElementById("sidebar-wrapper").style.display = "block";
         $("sidebar-wrapper").css('width', '100%');
@@ -62,13 +63,16 @@ function addPageMobile(page, book, path) {
 
         // Add the initial HTML
         // It will contain a loader indicator and a gradient
-        element.html('<div class="gradient"></div><div class="loader"></div>');
+        if (page % 2 != 0) {
+            element.html('<div class="gradient"></div><div class="loader"></div>');
 
-        // Load the page
+            // Load the page
 
-        //loadLargePage(page, element);
+            //loadLargePage(page, element);
 
-        loadPageMoile(page, element, path);
+            loadPageMoile(page, element, path);
+        }
+
 
     }
     console.log(path);
@@ -93,7 +97,6 @@ function loadPage(page, pageElement, path) {
         $(this).css({ width: '100%', height: '100%' });
 
         // Add the image to the page after loaded
-
         $(this).appendTo(pageElement);
 
         // Remove the loader indicator
@@ -195,7 +198,7 @@ function loadPageMoile(page, pageElement, path) {
     img.load(function() {
 
         // Set the size
-        img.css({ width: '400px', height: '511px' });
+        img.css({ width: '100%', height: '100%' });
 
         // Add the image to the page after loaded
 
@@ -209,9 +212,9 @@ function loadPageMoile(page, pageElement, path) {
     // Load the page
 
     //img.attr('src', 'pages/desktop/png/611x800px_online_portfolio' + page + '.png');
-    img.attr('data-src', Path + page + '.png');
-    img.attr('loading', 'lazy');
-    console.log(img.width, img.height, Path);
+    img.attr('src', Path + page + '.jpg');
+    //img.attr('loading', 'lazy');
+    console.log(Path + page + '.jpg', 'loadPageMobile');
 
 }
 
@@ -219,20 +222,21 @@ function loadSmallPageMobile(page, pageElement, path) {
 
     var img = pageElement.find('img');
 
-    img.css({ width: '400px', height: '511px' });
+    img.css({ width: '100%', height: '100%' });
 
     img.unbind('load');
     // Loadnew page
 
-    //img.attr('src', 'pages/desktop/png/611x800px_online_portfolio' + page + '.png');
-    img.attr('src', path + page + '.png');
+    img.attr('src', 'pages/mobile/png/611x800px_online_portfolio' + page + '.jpg');
+    //img.attr('src', path + page + '.png');
+    console.log('pages/mobile/png/611x800px_online_portfolio' + page + '.jpg', 'loadSmallPageMobile');
 
 }
 
 
 // Load large page
 
-/*function loadLargePage(page, pageElement) {
+function loadLargePage(page, pageElement) {
 
     var img = $('<img />');
 
@@ -247,9 +251,10 @@ function loadSmallPageMobile(page, pageElement, path) {
 
     // Loadnew page
 
-    img.attr('src', 'pages/' + page + '-large.png');
+    img.attr('src', 'pages/desktop/png/611x800px_online_portfolio' + page + '.png');
+    console.log('src', 'pages/desktop/png/611x800px_online_portfolio' + page + '.png', 'loadLargePage');
 
-}*/
+}
 
 // Load small page
 

@@ -95,7 +95,7 @@ function loadApp() {
 
         // The number of pages
 
-        pages: 264,
+        pages: 124,
 
         // Events
 
@@ -186,7 +186,7 @@ function loadApp() {
 
             missing: function(event, pages) {
                 // Add pages that aren't in the magazine
-                for (var i = 0; i < pages.length; i++) addPage(pages[i], $(this), 'pages/desktop/png/611x800px_online_portfolio');
+                for (var i = 0; i < pages.length; i++) addPageMobile(pages[i], $(this), 'pages/mobile/png/611x800px_online_portfolio');
             },
         },
     });
@@ -212,8 +212,8 @@ function loadApp() {
             },
 
             resize: function(event, scale, page, pageElement) {
-                if (scale == 1) loadSmallPage(page, pageElement, 'pages/mobile/png/611x800px_online_portfolio_');
-                //else loadLargePage(page, pageElement);
+                if (scale == 1) loadSmallPageMobile(page, pageElement, 'pages/mobile/png/611x800px_online_portfolio');
+                else loadLargePage(page, pageElement);
             },
 
             zoomIn: function() {

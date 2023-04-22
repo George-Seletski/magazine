@@ -1,6 +1,6 @@
 const container = document.querySelector('.sidebar-items');
 
-for (let i = 1; i < 133; i++) {
+for (let i = 1; i < 125; i++) {
     const listItem = document.createElement('li');
     const linkToPage = document.createElement('a');
     const spanTag = document.createElement('span');

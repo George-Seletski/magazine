@@ -85,7 +85,7 @@
 
          // The number of pages
 
-         pages: 132,
+         pages: 124,
 
          // Events
 
